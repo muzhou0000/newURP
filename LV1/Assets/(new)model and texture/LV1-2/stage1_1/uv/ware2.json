@@ -1,0 +1,61 @@
+{
+    "format": {
+        "version": "1.0"
+    },
+    "shaders": {
+        "Main shader": {
+            "parameters": {
+                "Common Parameters": {
+                    "ao_intensity": 0.75,
+                    "emissive_intensity": 4,
+                    "horizonFade": 1.2999999523162842,
+                    "nbSamples": 16
+                },
+                "Parallax Occlusion Mapping": {
+                    "maxPOMSamples": 16,
+                    "minPOMSamples": 4,
+                    "pomStrength": 1,
+                    "usePOM": false
+                },
+                "Subsurface Scattering Parameters": {
+                    "sssColor": [
+                        0.8566513061523438,
+                        0.009113157168030739,
+                        0.017588723450899124
+                    ],
+                    "sssEnabled": true,
+                    "sssScale": 0.5,
+                    "sssType": 1
+                }
+            },
+            "shader": "pbr-metal-rough",
+            "shaderInstance": "Main shader"
+        }
+    },
+    "texturesets": {
+        "aiStandardSurface11": {
+            "shader": "Main shader"
+        },
+        "f2": {
+            "shader": "Main shader"
+        },
+        "floor": {
+            "shader": "Main shader"
+        },
+        "light": {
+            "shader": "Main shader"
+        },
+        "main": {
+            "shader": "Main shader"
+        },
+        "shelf1": {
+            "shader": "Main shader"
+        },
+        "shelf2": {
+            "shader": "Main shader"
+        },
+        "underpass": {
+            "shader": "Main shader"
+        }
+    }
+}
