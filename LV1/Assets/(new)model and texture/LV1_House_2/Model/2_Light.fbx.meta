@@ -3,7 +3,17 @@ guid: 721ba8c00878c464f910b193a1e0fc90
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: light
+    second: {fileID: 2100000, guid: 585aee065cdedc94e8ff356105b1a70d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: waterpie
+    second: {fileID: 2100000, guid: 560f8be1bac8cab4ab65d19ddf830e1b, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
