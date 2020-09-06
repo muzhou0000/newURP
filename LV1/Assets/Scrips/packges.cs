@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class packges : MonoBehaviour
 {
-    public GameObject UI_Start;
+    public GameObject UI_Start,BBC;
     public int menu;
     public Animator STB_ani;
     void Update()
@@ -22,5 +22,7 @@ public class packges : MonoBehaviour
     {
 
         UI_Start.SetActive(false);
+        BBC.SetActive(false);
+
     }
 }
