@@ -3,7 +3,12 @@ guid: 9e3afc00f0e66a34d8dc254c70b5a925
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sign_light
+    second: {fileID: 2100000, guid: 34ed8d3e0a9be9b489aa41d0df9fa9f3, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -43,7 +48,7 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
-    swapUVChannels: 0
+    swapUVChannels: 1
     generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0

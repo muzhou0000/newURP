@@ -9,6 +9,7 @@ public class EnemyAI2 : MonoBehaviour
 
     public GameObject _playerPoint;
     GameObject _targetPoint;
+    public GameObject GG;
 
     float follow_ = 7;
 
@@ -50,20 +51,13 @@ public class EnemyAI2 : MonoBehaviour
 
         if (Vector3.Distance(transform.position, _playerPoint.transform.position) < follow_)
         {
-            Debug.Log("發現玩家...");
-            if (Vector3.Distance(transform.position, _playerPoint.transform.position) < 0.1f)
-            {
-                Debug.Log("攻擊動畫...");
-            }
-            else
-            {
-                Vector3 x = _playerPoint.transform.position;
-                transform.LookAt(_playerPoint.transform.position);
-                transform.Translate(Vector3.forward * Time.deltaTime * 10f, Space.Self);
 
-                follow_ = 10.5f;
-                print(follow_);
-            }
+            Vector3 x = _playerPoint.transform.position;
+            transform.LookAt(_playerPoint.transform.position);
+            transform.Translate(Vector3.forward * Time.deltaTime * 10f, Space.Self);
+            GG.SetActive(true);
+
         }
     }
 }
+

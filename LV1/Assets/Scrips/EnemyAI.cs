@@ -54,22 +54,12 @@ public class EnemyAI : MonoBehaviour
 
         if (Vector3.Distance(transform.position, _playerPoint.transform.position) < follow_)
         {
-            Debug.Log("發現玩家...");
-            if (Vector3.Distance(transform.position, _playerPoint.transform.position) < 5)
-            {
-                Debug.Log("攻擊動畫...");
-                GG.SetActive(true);
-            }
-            else
-            {
+          
                 Vector3 x = _playerPoint.transform.position;
                 transform.LookAt(_playerPoint.transform.position);
                 transform.Translate(Vector3.forward * Time.deltaTime * 10f, Space.Self);
                 GG.SetActive(true);
-
-                follow_ = 10.5f;
-                print(follow_);
-            }
+            
         }
     }
 }
