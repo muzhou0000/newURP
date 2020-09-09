@@ -21,6 +21,8 @@ public class AB12 : MonoBehaviour
     public Text enterText1, enterText2, enterText3, enterText4;
 
     public int times = 0;
+    public GameObject AB;
+    public GameObject GG;
 
     private void Start()
     {
@@ -50,7 +52,17 @@ public class AB12 : MonoBehaviour
     private void Update()
     {
         
-            Calculation();
+        Calculation();
+        print(a);
+        if (times<=5&&a == 4)
+        {
+            AB.SetActive(false);
+        }
+        if (times > 5 && a < 4)
+        {
+            AB.SetActive(false);
+            GG.SetActive(true);
+        }
     }
 
     //public void Entering()

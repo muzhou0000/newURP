@@ -15,7 +15,7 @@ public class packges : MonoBehaviour
         {
             STB_ani.SetBool("1", true);
             //等17秒後執行下面那個程式
-            Invoke("endUIStart", 17);
+            Invoke("endUIStart", 15);
         }
     }
     void endUIStart()
