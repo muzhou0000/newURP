@@ -12,6 +12,7 @@ public class CheckLight : MonoBehaviour
     public GameObject Player;
     public GameObject Cam;
     public GameObject AB;
+    public GameObject Flash;
     void Start()
     {
         check1.enabled = false;
@@ -97,6 +98,7 @@ public class CheckLight : MonoBehaviour
             GameObject.Find("countdown").SendMessage("time");
             Player.SetActive(true);
             Cam.SetActive(false);
+            Flash.SetActive(true);
             //AB.SetActive(true);
         }
     }

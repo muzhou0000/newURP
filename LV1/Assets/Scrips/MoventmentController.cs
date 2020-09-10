@@ -15,7 +15,7 @@ public class MoventmentController : MonoBehaviour
     public Animator ani;
     public float JumpPower;
     public float RunSpeed;
-    public CinemachineFreeLook freeLook_cam;
+    //public CinemachineFreeLook freeLook_cam;
 
     [SerializeField] float rotationSpeed = 0.3f;
     [SerializeField] float allowRotation = 0.1f;
@@ -97,10 +97,10 @@ public class MoventmentController : MonoBehaviour
         if (characterController.isGrounded)
         {
             gravity = 0;
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space)&& gravity == 0)
             {
                 gravity = JumpPower * Time.deltaTime;
-                ani.SetTrigger("跳");
+                //ani.SetTrigger("跳");
             }
         }
 

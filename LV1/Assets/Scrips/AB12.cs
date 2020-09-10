@@ -23,6 +23,7 @@ public class AB12 : MonoBehaviour
     public int times = 0;
     public GameObject AB;
     public GameObject GG;
+    public GameObject Cam;
 
     private void Start()
     {
@@ -62,6 +63,7 @@ public class AB12 : MonoBehaviour
         if (times<=5&&a == 4)
         {
             AB.SetActive(false);
+            Cam.SetActive(false);
         }
         if (times > 5 && a < 4)
         {
