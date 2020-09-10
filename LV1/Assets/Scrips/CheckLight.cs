@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class CheckLight : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class CheckLight : MonoBehaviour
     public Light check1, check2, check3, check4, check5, check6, check7, check8, check9;
     public GameObject countdown;
     public GameObject GG;
+    public GameObject Player;
+    public GameObject Cam;
+    public GameObject AB;
     void Start()
     {
         check1.enabled = false;
@@ -91,6 +95,9 @@ public class CheckLight : MonoBehaviour
         {
             countdown.SetActive(true);
             GameObject.Find("countdown").SendMessage("time");
+            Player.SetActive(true);
+            Cam.SetActive(false);
+            //AB.SetActive(true);
         }
     }
     
