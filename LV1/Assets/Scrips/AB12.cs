@@ -10,7 +10,7 @@ public class AB12 : MonoBehaviour
     public int[] randomArray = new int[4];
     public int[] ansArrary = new int[4];
 
-    public Text first, second, third, four;
+    public Text first, second, third, four,realans;
     public Text review1, review2, review3, review4;
     int ans, a, b;
     public int preventError;
@@ -26,22 +26,27 @@ public class AB12 : MonoBehaviour
 
     private void Start()
     {
-        UnityEngine.Random rnd = new UnityEngine.Random();  //產生亂數初始值
-        for (int i = 0; i < 4; i++)
-        {
-            randomArray[i] = UnityEngine.Random.Range(1, 10);   //亂數產生，亂數產生的範圍是1~9
+        //UnityEngine.Random rnd = new UnityEngine.Random();  //產生亂數初始值
+        //for (int i = 0; i < 4; i++)
+        //{
+        //    randomArray[i] = UnityEngine.Random.Range(1, 10);   //亂數產生，亂數產生的範圍是1~9
 
-            for (int j = 0; j < i; j++)
-            {
-                while (randomArray[j] == randomArray[i])    //檢查是否與前面產生的數值發生重複，如果有就重新產生
-                {
-                    j = 0;  //如有重複，將變數j設為0，再次檢查 (因為還是有重複的可能)
-                    randomArray[i] = UnityEngine.Random.Range(1, 10);   //重新產生，存回陣列，亂數產生的範圍是1~9
-                }
+        //    for (int j = 0; j < i; j++)
+        //    {
+        //        while (randomArray[j] == randomArray[i])    //檢查是否與前面產生的數值發生重複，如果有就重新產生
+        //        {
+        //            j = 0;  //如有重複，將變數j設為0，再次檢查 (因為還是有重複的可能)
+        //            randomArray[i] = UnityEngine.Random.Range(1, 10);   //重新產生，存回陣列，亂數產生的範圍是1~9
+        //        }
 
-            }
+        //    }
 
-        }
+        //}
+        randomArray[0] = 1;
+        randomArray[1] = 2;
+        randomArray[2] = 3;
+        randomArray[3] = 4;
+
 
     }
 

@@ -16,5 +16,13 @@ public class Mouse : MonoBehaviour
     {
 
     }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
 
 }
