@@ -13,7 +13,6 @@ public class EnemyAI : MonoBehaviour
     public GameObject _playerPoint;
     GameObject _targetPoint;
 
-    float follow_=7;
     public GameObject GG;
 
     void Start()
@@ -32,6 +31,7 @@ public class EnemyAI : MonoBehaviour
             _targetWayPoint = _startWayPoint;
         }
     }
+    
     void Update()
     {
         if (Vector3.Distance(transform.position, _playerPoint.transform.position) >=8f)
@@ -48,18 +48,22 @@ public class EnemyAI : MonoBehaviour
             transform.Translate(Vector3.forward * Time.deltaTime * 10f, Space.Self);
         }
     }
-    public void attack()
+    public void Attack()
     {
-        print("有碰到");
-
-        if (Vector3.Distance(transform.position, _playerPoint.transform.position) < follow_)
+        if (Vector3.Distance(transform.position, _playerPoint.transform.position) < 7)
         {
-          
-                Vector3 x = _playerPoint.transform.position;
-                transform.LookAt(_playerPoint.transform.position);
-                transform.Translate(Vector3.forward * Time.deltaTime * 10f, Space.Self);
-                GG.SetActive(true);
-            
+            Vector3 x = _playerPoint.transform.position;
+            //transform.LookAt(_playerPoint.transform.position);
+            transform.Translate(Vector3.forward * Time.deltaTime * 10f, Space.Self);
+            GG.SetActive(true);
+            GameObject.Find("DeadCheckPoint").SendMessage("DeadInWare");
+            Invoke("EndGG", 3);
+
         }
     }
+    void EndGG()
+    {
+        GG.SetActive(false);
+    }
+
 }

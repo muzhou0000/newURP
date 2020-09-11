@@ -8,7 +8,8 @@ public class trigger1 : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        GameObject.Find("Enemy").SendMessage("attack");
-        
+        if (other.tag == "Player") { 
+        GameObject.Find("Enemy").SendMessage("Attack");
+        }
     }
 }
