@@ -14,6 +14,7 @@ public class EnemyAI : MonoBehaviour
     GameObject _targetPoint;
 
     public GameObject GG;
+    public int follow = 7;
 
     void Start()
     {
@@ -50,18 +51,18 @@ public class EnemyAI : MonoBehaviour
     }
     public void Attack()
     {
-        if (Vector3.Distance(transform.position, _playerPoint.transform.position) < 7)
+        if (Vector3.Distance(transform.position, _playerPoint.transform.position) < follow)
         {
             Vector3 x = _playerPoint.transform.position;
             //transform.LookAt(_playerPoint.transform.position);
             transform.Translate(Vector3.forward * Time.deltaTime * 10f, Space.Self);
             GG.SetActive(true);
-            GameObject.Find("DeadCheckPoint").SendMessage("DeadInWare");
-            Invoke("EndGG", 3);
+            //GameObject.Find("DeadCheckPoint").SendMessage("DeadInWare");
+            //Invoke("EndGG", 3);
 
         }
     }
-    void EndGG()
+    public void EndGG()
     {
         GG.SetActive(false);
     }

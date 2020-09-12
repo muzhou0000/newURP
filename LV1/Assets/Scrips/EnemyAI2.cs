@@ -54,12 +54,12 @@ public class EnemyAI2 : MonoBehaviour
             transform.LookAt(_playerPoint.transform.position);
             transform.Translate(Vector3.forward * Time.deltaTime * 10f, Space.Self);
             GG.SetActive(true);
-            GameObject.Find("DeadCheckPoint").SendMessage("DeadInWare");
-            Invoke("EndGG", 3);
+            //GameObject.Find("DeadCheckPoint").SendMessage("DeadInWare");
+            //Invoke("EndGG", 3);
 
         }
     }
-    void EndGG()
+    public void EndGG()
     {
         GG.SetActive(false);
     }

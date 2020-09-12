@@ -177,10 +177,10 @@ TextureImporter:
       name: "\u63D0\u793A\u6846\u8207\u9053\u5177\u62FE\u7372\u6846_3"
       rect:
         serializedVersion: 2
-        x: 3452
+        x: 3393
         y: 11
-        width: 1815
-        height: 932
+        width: 1874
+        height: 968
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
