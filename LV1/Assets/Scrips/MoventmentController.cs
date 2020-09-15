@@ -15,6 +15,8 @@ public class MoventmentController : MonoBehaviour
     public Animator ani;
     public float JumpPower;
     public float RunSpeed;
+    public GameObject Cam;
+    public GameObject Jump_Object;
     //public CinemachineFreeLook freeLook_cam;
 
     [SerializeField] float rotationSpeed = 0.3f;
@@ -71,7 +73,7 @@ public class MoventmentController : MonoBehaviour
     }
     void MovementManager()
     {
-        gravity -= 5f * Time.deltaTime;
+        gravity -= 2.5f * Time.deltaTime;
         gravity = gravity * gravityMultipler;
 
         Vector3 moveDirection = desiredMoveDirection * (movementSpeed*Time.deltaTime)*0.08f;
@@ -103,6 +105,7 @@ public class MoventmentController : MonoBehaviour
                 gravity = moveDirection.y;
                 //ani.SetTrigger("跳");
             }
+            
         }
 
     }
