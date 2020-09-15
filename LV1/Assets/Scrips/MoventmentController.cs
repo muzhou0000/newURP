@@ -71,7 +71,7 @@ public class MoventmentController : MonoBehaviour
     }
     void MovementManager()
     {
-        gravity -= 9.8f * Time.deltaTime;
+        gravity -= 5f * Time.deltaTime;
         gravity = gravity * gravityMultipler;
 
         Vector3 moveDirection = desiredMoveDirection * (movementSpeed*Time.deltaTime)*0.08f;
@@ -99,7 +99,8 @@ public class MoventmentController : MonoBehaviour
             gravity = 0;
             if (Input.GetKeyDown(KeyCode.Space)&& gravity == 0)
             {
-                gravity = JumpPower * Time.deltaTime;
+                moveDirection.y += JumpPower * Time.deltaTime;
+                gravity = moveDirection.y;
                 //ani.SetTrigger("跳");
             }
         }
