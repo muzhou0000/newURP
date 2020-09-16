@@ -101,6 +101,18 @@ public class CheckLight : MonoBehaviour
             Flash.SetActive(true);
             //AB.SetActive(true);
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            check1.enabled = false;
+            check2.enabled = false;
+            check3.enabled = false;
+            check4.enabled = false;
+            check5.enabled = false;
+            check6.enabled = false;
+            check7.enabled = false;
+            check8.enabled = false;
+            check9.enabled = false;
+        }
     }
     
 }
