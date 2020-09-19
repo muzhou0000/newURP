@@ -8,21 +8,20 @@ public class packges : MonoBehaviour
 {
     public GameObject UI_Start,BBC;
     public int menu;
-    public Animator STB_ani;
+    public Animator start;
     void Update()
     {
         if (Input.anyKeyDown)//如果按下任意鈕
         {
-            STB_ani.SetBool("1", true);
+            start.SetBool("start", true);
             //等17秒後執行下面那個程式
-            Invoke("endUIStart", 15);
+            Invoke("endUIStart", 15.267f);
         }
     }
     void endUIStart()
     {
 
         UI_Start.SetActive(false);
-        BBC.SetActive(false);
 
     }
 }
