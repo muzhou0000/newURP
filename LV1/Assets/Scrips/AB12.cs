@@ -21,9 +21,10 @@ public class AB12 : MonoBehaviour
     public Text enterText1, enterText2, enterText3, enterText4;
 
     public int times = 0;
-    public GameObject AB;
+    public GameObject AB,main_AB;
     public GameObject GG;
     public GameObject Cam;
+    public GameObject ABend;
 
     private void Start()
     {
@@ -64,12 +65,22 @@ public class AB12 : MonoBehaviour
         {
             AB.SetActive(false);
             Cam.SetActive(false);
+            ABend.SetActive(true);
+
+            if (Input.anyKeyDown)
+            {
+                ABend.SetActive(false);
+                main_AB.SetActive(false);
+                times += 5;
+            }
         }
         if (times > 5 && a < 4)
         {
             AB.SetActive(false);
+            Cam.SetActive(false);
             GG.SetActive(true);
         }
+        
     }
 
     //public void Entering()
