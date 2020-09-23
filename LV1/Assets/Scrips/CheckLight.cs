@@ -13,6 +13,7 @@ public class CheckLight : MonoBehaviour
     public GameObject Cam;
     public GameObject AB;
     public GameObject Flash;
+   public GameObject Door_coilder;
     void Start()
     {
         check1.enabled = false;
@@ -99,8 +100,10 @@ public class CheckLight : MonoBehaviour
             Player.SetActive(true);
             Cam.SetActive(false);
             Flash.SetActive(true);
+            Door_coilder.SetActive(true);
             //AB.SetActive(true);
         }
+       
         if (Input.GetKeyDown(KeyCode.R))
         {
             check1.enabled = false;
