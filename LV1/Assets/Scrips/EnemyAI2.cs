@@ -32,12 +32,10 @@ public class EnemyAI2 : MonoBehaviour
         if (Vector3.Distance(transform.position, _playerPoint.transform.position) >= 8f)
         {
 
-            Debug.Log("巡邏中...");
             Vector3 v = _targetWayPoint.transform.position;
             if (Vector3.Distance(transform.position, v) < 1.5f)
             {
                 _targetWayPoint = _targetWayPoint.NextWayPoint;
-                Debug.Log("巡邏下一個點" + _targetWayPoint.name);
             }
             transform.LookAt(_targetWayPoint.transform.position);
             transform.Translate(Vector3.forward * Time.deltaTime * 10f, Space.Self);
@@ -45,7 +43,6 @@ public class EnemyAI2 : MonoBehaviour
     }
     public void attack()
     {
-        print("有碰到");
 
         if (Vector3.Distance(transform.position, _playerPoint.transform.position) < 7)
         {

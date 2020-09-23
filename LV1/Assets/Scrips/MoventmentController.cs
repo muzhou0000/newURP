@@ -33,7 +33,7 @@ public class MoventmentController : MonoBehaviour
         //rig = GetComponent<Rigidbody>();
     }
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         InputX = Input.GetAxis("Horizontal");
         InputZ = Input.GetAxis("Vertical");

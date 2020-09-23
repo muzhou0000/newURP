@@ -23,7 +23,7 @@ public class AB12 : MonoBehaviour
     public int times = 0;
     public GameObject AB,main_AB;
     public GameObject GG;
-    public GameObject Cam;
+    public GameObject Cam,Player,deadPoint;
     public GameObject ABend;
 
     private void Start()
@@ -79,6 +79,8 @@ public class AB12 : MonoBehaviour
             AB.SetActive(false);
             Cam.SetActive(false);
             GG.SetActive(true);
+            Player.transform.position = deadPoint.transform.position;
+
         }
         
     }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Fungus;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,13 +10,12 @@ public class countdown : MonoBehaviour
     public Text timeUI;
     public GameObject GG;
     public GameObject time_active;
+    public Flowchart opendoor;
+    string MyFloatName = "RE";
 
-    private void time()
-    {
-        InvokeRepeating("timecount", 1, 1);
-    }
 
-    void timecount()
+
+    private void Update()
     {
         time_int -= Time.deltaTime;
         timeUI.text = time_int + "秒";
@@ -26,6 +26,11 @@ public class countdown : MonoBehaviour
             time_active.SetActive(false);
         }
     }
+    private void time()
+    {
+        InvokeRepeating("timecount", 1, 1);
+    }
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")

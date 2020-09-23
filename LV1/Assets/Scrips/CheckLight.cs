@@ -95,8 +95,8 @@ public class CheckLight : MonoBehaviour
 
         if (check1.enabled && check2.enabled && check3.enabled && check4.enabled && check5.enabled && check6.enabled && check7.enabled && check8.enabled && check9.enabled)
         {
-            countdown.SetActive(true);
-            GameObject.Find("countdown").SendMessage("time");
+            //countdown.SetActive(true);
+            //GameObject.Find("countdown").SendMessage("time");
             Player.SetActive(true);
             Cam.SetActive(false);
             Flash.SetActive(true);
