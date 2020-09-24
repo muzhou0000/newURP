@@ -16,7 +16,7 @@ public class MoventmentController : MonoBehaviour
     public float JumpPower;
     public float RunSpeed;
     public GameObject Cam;
-    public GameObject Jump_Object;
+    //public GameObject Jump_Object;
     //public CinemachineFreeLook freeLook_cam;
 
     [SerializeField] float rotationSpeed = 0.3f;
@@ -40,6 +40,8 @@ public class MoventmentController : MonoBehaviour
 
         InputDecider();
         MovementManager();
+        Jump();
+        
     }
     void InputDecider()
     {
@@ -85,7 +87,7 @@ public class MoventmentController : MonoBehaviour
 
         if(Input.GetKey(KeyCode.LeftShift))
         {
-            moveDirection = desiredMoveDirection * (RunSpeed * Time.deltaTime);
+            moveDirection = desiredMoveDirection * (RunSpeed * Time.deltaTime) * 0.08f;
             moveDirection = new Vector3(moveDirection.x, gravity, moveDirection.z);
 
             characterController.Move(moveDirection);
@@ -96,18 +98,23 @@ public class MoventmentController : MonoBehaviour
             ani.SetBool("跑步", false);
         }
 
+    }
+    void Jump()
+    {
         if (characterController.isGrounded)
         {
             gravity = 0;
-            if (Input.GetKeyDown(KeyCode.Space)&& gravity == 0)
+            if (Input.GetKeyDown(KeyCode.Space) && gravity == 0)
             {
-                moveDirection.y += JumpPower * Time.deltaTime;
-                gravity = moveDirection.y;
-                //ani.SetTrigger("跳");
+                gravity += (JumpPower * Time.fixedDeltaTime) * 0.08f;
+                ani.SetTrigger("跳");
+                ani.SetBool("Idle", false);
             }
-            
+            else
+            {
+                ani.SetBool("Idle", true);
+            }
         }
-
     }
 
 }
