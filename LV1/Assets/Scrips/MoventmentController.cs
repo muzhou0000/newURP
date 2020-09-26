@@ -33,6 +33,7 @@ public class MoventmentController : MonoBehaviour
         //rig = GetComponent<Rigidbody>();
     }
     // Update is called once per frame
+
     private void Update()
     {
         InputX = Input.GetAxis("Horizontal");
@@ -41,7 +42,7 @@ public class MoventmentController : MonoBehaviour
         InputDecider();
         MovementManager();
         Jump();
-        
+
     }
     void InputDecider()
     {
@@ -75,7 +76,7 @@ public class MoventmentController : MonoBehaviour
     }
     void MovementManager()
     {
-        gravity -= 2.5f * Time.deltaTime;
+        gravity -= 100f* Time.deltaTime*Time.fixedDeltaTime;
         gravity = gravity * gravityMultipler;
 
         Vector3 moveDirection = desiredMoveDirection * (movementSpeed*Time.deltaTime)*0.08f;
@@ -84,8 +85,10 @@ public class MoventmentController : MonoBehaviour
         characterController.Move(moveDirection);
         
         ani.SetBool("走路", moveDirection.x !=0);
+        ani.SetBool("Idle", false);
 
-        if(Input.GetKey(KeyCode.LeftShift))
+
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             moveDirection = desiredMoveDirection * (RunSpeed * Time.deltaTime) * 0.08f;
             moveDirection = new Vector3(moveDirection.x, gravity, moveDirection.z);
@@ -106,7 +109,7 @@ public class MoventmentController : MonoBehaviour
             gravity = 0;
             if (Input.GetKeyDown(KeyCode.Space) && gravity == 0)
             {
-                gravity += (JumpPower * Time.fixedDeltaTime) * 0.08f;
+                gravity += (JumpPower * Time.fixedDeltaTime) *0.08f ;
                 ani.SetTrigger("跳");
                 ani.SetBool("Idle", false);
             }

@@ -13,7 +13,9 @@ public class CheckLight : MonoBehaviour
     public GameObject Cam;
     public GameObject AB;
     public GameObject Flash;
-   public GameObject Door_coilder;
+    public GameObject Cam_1;
+    public GameObject Emeny;
+
     void Start()
     {
         check1.enabled = false;
@@ -100,7 +102,8 @@ public class CheckLight : MonoBehaviour
             Player.SetActive(true);
             Cam.SetActive(false);
             Flash.SetActive(true);
-            Door_coilder.SetActive(true);
+            Cam_1.SetActive(true);
+            Emeny.SetActive(false);
             //AB.SetActive(true);
         }
        
