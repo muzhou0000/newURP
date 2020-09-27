@@ -25,6 +25,10 @@ public class AB12 : MonoBehaviour
     public GameObject GG;
     public GameObject Cam,Player,deadPoint;
     public GameObject ABend;
+    public GameObject Die;
+    public GameObject Die_1;
+    public GameObject Die_2;
+    public Flowchart flow;
 
     private void Start()
     {
@@ -66,6 +70,10 @@ public class AB12 : MonoBehaviour
             AB.SetActive(false);
             Cam.SetActive(false);
             ABend.SetActive(true);
+            Die.SetActive(false);
+            flow.SetBooleanVariable("對話中", false);
+            Die_1.SetActive(true);
+            Die_2.SetActive(true);
 
             if (Input.anyKeyDown)
             {

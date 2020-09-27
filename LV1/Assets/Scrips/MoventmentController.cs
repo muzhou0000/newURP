@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using Fungus;
 
 [RequireComponent(typeof(CharacterController))]
 public class MoventmentController : MonoBehaviour
@@ -16,6 +17,7 @@ public class MoventmentController : MonoBehaviour
     public float JumpPower;
     public float RunSpeed;
     public GameObject Cam;
+    public Flowchart Talk;
     //public GameObject Jump_Object;
     //public CinemachineFreeLook freeLook_cam;
 
@@ -39,9 +41,8 @@ public class MoventmentController : MonoBehaviour
         InputX = Input.GetAxis("Horizontal");
         InputZ = Input.GetAxis("Vertical");
 
-        InputDecider();
-        MovementManager();
-        Jump();
+       
+        MovementController();
 
     }
     void InputDecider()
@@ -119,5 +120,20 @@ public class MoventmentController : MonoBehaviour
             }
         }
     }
+    void  MovementController()
+    {
+        if(Talk.GetBooleanVariable("對話中") ==false)
+        {
+            MovementManager();
+            Jump();
+            InputDecider();
+        }
+        if (Talk.GetBooleanVariable("對話中") == true)
+        {
+            ani.SetBool("Idle", true);
+            ani.SetBool("跑步", false);
+            ani.SetBool("走路", false);
+        }
 
+    }
 }
