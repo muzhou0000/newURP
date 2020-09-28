@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: a0b1d552f21340346bcfa7dcf0365b17, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: f61ae3e4217feb340baf257411924d34, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -57,7 +57,7 @@ LightmapSettings:
     serializedVersion: 12
     m_Resolution: 2
     m_BakeResolution: 4
-    m_AtlasSize: 1024
+    m_AtlasSize: 512
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -4927,7 +4927,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82351664}
-  m_LocalRotation: {x: 0.09115311, y: -0.0000000176621, z: 0.0000000016166853, w: 0.9958369}
+  m_LocalRotation: {x: 0.09115311, y: 0.000000017662096, z: -0.000000001616685, w: 0.9958369}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -25038,7 +25038,7 @@ MonoBehaviour:
     gameObjectVal: {fileID: 129740726}
   _duration:
     floatRef: {fileID: 0}
-    floatVal: 1
+    floatVal: 0.1
   _toFrom: 0
   _absAdd: 0
   easeType: 4
@@ -25145,8 +25145,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 455383054}
-  selectedCommands: []
+  - {fileID: 455383027}
+  selectedCommands:
+  - {fileID: 455383024}
   variables:
   - {fileID: 455383049}
   description: 
@@ -26078,7 +26079,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 168.97906
-    y: 222.38809
+    y: 220.56992
     width: 96.545456
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -27341,7 +27342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1388719136}
+  selectedFlowchart: {fileID: 455383028}
 --- !u!4 &477137881
 Transform:
   m_ObjectHideFlags: 1
@@ -33955,7 +33956,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620153740}
-  m_LocalRotation: {x: 0.20676988, y: -0.000000016834546, z: 0.000000003557762, w: 0.9783896}
+  m_LocalRotation: {x: 0.20676987, y: 0.000000016834543, z: -0.0000000035577619, w: 0.9783896}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -38628,14 +38629,14 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.03358251, g: 0.03150585, b: 0.03773582, a: 1}
+  m_Color: {r: 0.14901961, g: 0.1764706, b: 0.21568628, a: 1}
   m_Intensity: 50
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -44663,7 +44664,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 806451911}
   selectedCommands:
-  - {fileID: 806451913}
+  - {fileID: 806451917}
   variables:
   - {fileID: 806451905}
   - {fileID: 806451919}
@@ -45947,7 +45948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 22
   indentLevel: 2
-  storyText: "\u683C\u7D0D\u8AAA\u904E\u4ECA\u5929\u525B\u597D\u662F\u4F4F\u5C45\u6AA2\u67E5\u65E5\uFF0C\u8B66\u5099\u968A\u7684\u4EBA\u6703\u5C01\u9396\u4E3B\u8981\u8857\u9053\u63A2\u67E5\u6BCF\u4E00\u6236\uFF0C\n\n\u5F97\u60F3\u8FA6\u6CD5\u5438\u5F15\u4ED6\u5011\u6CE8\u610F\u529B\u624D\u884C\u2026\u2026\n\n\u4ED6\u525B\u525B\u8AAA\u8981\u5148\u53BB\u820A\u5009\u5EAB\u4E00\u8D9F\uFF0C\u6211\u5F97\u8DDF\u4E0A\u4ED6\u3002"
+  storyText: "\u683C\u7D0D\u8AAA\u904E\u4ECA\u5929\u525B\u597D\u662F\u4F4F\u5C45\u6AA2\u67E5\u65E5\uFF0C\u8B66\u5099\u968A\u7684\u4EBA\u6703\u5C01\u9396\u4E3B\u8981\u8857\u9053\u63A2\u67E5\u6BCF\u4E00\u6236\uFF0C\n\n\u5F97\u60F3\u8FA6\u6CD5\u5438\u5F15\u4ED6\u5011\u6CE8\u610F\u529B\u624D\u884C\u2026\u2026"
   description: 
   character: {fileID: 472062032}
   portrait: {fileID: 0}
@@ -54111,7 +54112,7 @@ Camera:
   field of view: 100
   orthographic: 0
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -54133,7 +54134,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922453317}
-  m_LocalRotation: {x: 0.20676988, y: -0.000000033669092, z: 0.0000000071155233, w: 0.9783896}
+  m_LocalRotation: {x: 0.20676985, y: 0.00000003366909, z: -0.0000000071155215, w: 0.9783896}
   m_LocalPosition: {x: -1295, y: 64.70632, z: 78.83924}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -64323,7 +64324,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1116529155
 Transform:
   m_ObjectHideFlags: 0
@@ -68599,7 +68600,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1225477485}
   selectedCommands:
-  - {fileID: 1225477490}
+  - {fileID: 1225477488}
   variables: []
   description: 
   stepPause: 0
@@ -91148,7 +91149,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1604689318
 RectTransform:
   m_ObjectHideFlags: 0
@@ -103282,7 +103283,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1785478279}
-  m_LocalRotation: {x: -0.025254013, y: -0.93424684, z: -0.06755301, w: 0.34925878}
+  m_LocalRotation: {x: -0.025254, y: -0.9342469, z: -0.067553006, w: 0.34925863}
   m_LocalPosition: {x: 0.29821777, y: 2.4419174, z: 115.478165}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -121017,7 +121018,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 750, y: 540}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2032232687
 MonoBehaviour:
