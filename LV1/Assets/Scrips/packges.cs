@@ -28,7 +28,7 @@ public class packges : MonoBehaviour
             Invoke("wait", 1);
             Invoke("wait_1", 0.5f);
             //等17秒後執行下面那個程式
-            Invoke("endUIStart_2", 41);
+            Invoke("endUIStart_2", 42);
         }
     }
 
