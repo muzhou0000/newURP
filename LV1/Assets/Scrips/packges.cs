@@ -11,8 +11,8 @@ public class packges : MonoBehaviour
     public Animator start;
     public Flowchart flow;
     public Flowchart fade_in;
-    public GameObject Gam_fade_in;
-
+    public GameObject Gam_fade_in, Instructions;
+    int check_number = 0;
 
     void FixedUpdate()
     {
@@ -26,9 +26,12 @@ public class packges : MonoBehaviour
             fade_in.SetBooleanVariable("淡出", true);
             flow.SetBooleanVariable("開頭",true);
             Invoke("wait", 1);
-            Invoke("wait_1", 0.5f);
-            //等17秒後執行下面那個程式
             Invoke("endUIStart_2", 42);
+            if (check_number == 1&& Input.GetKeyDown(KeyCode.R))
+            {
+                Instructions.SetActive(false);
+
+            }
         }
     }
 
@@ -45,6 +48,8 @@ public class packges : MonoBehaviour
     {
 
         UI_Start.SetActive(false);
+        check_number = 1;
+        
 
     }
 }
