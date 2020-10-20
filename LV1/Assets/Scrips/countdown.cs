@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class countdown : MonoBehaviour
 {
-    float time_int = 60f;
+    float time_int = 30f;
     public Text timeUI;
     public GameObject GG;
     public GameObject time_active;

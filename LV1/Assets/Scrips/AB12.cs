@@ -34,6 +34,7 @@ public class AB12 : MonoBehaviour
 
     private void Start()
     {
+
         //UnityEngine.Random rnd = new UnityEngine.Random();  //產生亂數初始值
         //for (int i = 0; i < 4; i++)
         //{
@@ -134,23 +135,20 @@ public class AB12 : MonoBehaviour
         //ansArrary[1] = (ans / 100) % 10;
         //ansArrary[2] = (ans / 10) % 10;
         //ansArrary[3] = ans % 10;
-        
 
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            x++;
-            if (x == 4)
-            {
-                x = 0;
-            }
             ansArrary[x] = int.Parse(enterText1.text);
             ansArrary[x] = int.Parse(enterText2.text);
             ansArrary[x] = int.Parse(enterText3.text);
             ansArrary[x] = int.Parse(enterText4.text);
-        }
-        Debug.Log(x);
         
 
+    }
+    void tabNext()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            Selectable next = null;
+        }
     }
     public void ccc()
     {
