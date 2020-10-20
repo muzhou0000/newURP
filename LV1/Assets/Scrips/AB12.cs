@@ -29,6 +29,8 @@ public class AB12 : MonoBehaviour
     public GameObject Die_1;
     public GameObject Die_2;
     public Flowchart flow;
+    int x;
+
 
     private void Start()
     {
@@ -132,11 +134,22 @@ public class AB12 : MonoBehaviour
         //ansArrary[1] = (ans / 100) % 10;
         //ansArrary[2] = (ans / 10) % 10;
         //ansArrary[3] = ans % 10;
-        ansArrary[0] = int.Parse(enterText1.text);
-        ansArrary[1] = int.Parse(enterText2.text);
-        ansArrary[2] = int.Parse(enterText3.text);
-        ansArrary[3] = int.Parse(enterText4.text);
+        
 
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            x++;
+            if (x == 4)
+            {
+                x = 0;
+            }
+            ansArrary[x] = int.Parse(enterText1.text);
+            ansArrary[x] = int.Parse(enterText2.text);
+            ansArrary[x] = int.Parse(enterText3.text);
+            ansArrary[x] = int.Parse(enterText4.text);
+        }
+        Debug.Log(x);
+        
 
     }
     public void ccc()
