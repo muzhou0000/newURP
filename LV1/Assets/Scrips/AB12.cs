@@ -120,11 +120,7 @@ public class AB12 : MonoBehaviour
                     first.text = enterText1.text+ enterText2.text+ enterText3.text+ enterText4.text;
                     break;
             }
-                
-            
-
         }
-
     }
     public void Calculation()
     {
@@ -136,20 +132,14 @@ public class AB12 : MonoBehaviour
         //ansArrary[2] = (ans / 10) % 10;
         //ansArrary[3] = ans % 10;
 
-            ansArrary[x] = int.Parse(enterText1.text);
-            ansArrary[x] = int.Parse(enterText2.text);
-            ansArrary[x] = int.Parse(enterText3.text);
-            ansArrary[x] = int.Parse(enterText4.text);
+            ansArrary[0] = int.Parse(enterText1.text);
+            ansArrary[1] = int.Parse(enterText2.text);
+            ansArrary[2] = int.Parse(enterText3.text);
+            ansArrary[3] = int.Parse(enterText4.text);
         
 
     }
-    void tabNext()
-    {
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            Selectable next = null;
-        }
-    }
+ 
     public void ccc()
     {
         if (preventError == 0)
