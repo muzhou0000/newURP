@@ -53,7 +53,8 @@ public class LV2_Movent : MonoBehaviour
     {
         V.curDis = curDistance;
         InputX = Input.GetAxis("Horizontal");
-        InputZ = Input.GetAxis("Vertical");
+        //InputZ = Input.GetAxis("Vertical");
+       
         if(characterController.isGrounded)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -74,7 +75,9 @@ public class LV2_Movent : MonoBehaviour
     {
         Speed = new Vector2(InputX, InputZ).sqrMagnitude;
 
-        if(Speed > allowRotation)
+        //Speed = new Vector2(InputX, 0).sqrMagnitude;
+
+        if (Speed > allowRotation)
         {
             RotationManger();
         }
@@ -106,7 +109,8 @@ public class LV2_Movent : MonoBehaviour
         gravity = gravity * gravityMultipler;
 
         Vector3 moveDirection = desiredMoveDirection * (movementSpeed * Time.deltaTime) * 0.08f;
-        moveDirection = new Vector3(moveDirection.x, gravity, moveDirection.z);
+        //moveDirection = new Vector3(moveDirection.x, gravity, moveDirection.z);
+        moveDirection = new Vector3(moveDirection.x, gravity, movementSpeed * Time.deltaTime * 0.08f);
 
         characterController.Move(moveDirection);
 
