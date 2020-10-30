@@ -9,6 +9,7 @@ public class AB12 : MonoBehaviour
 {
     public int[] randomArray = new int[4];
     public int[] ansArrary = new int[4];
+    public InputField[] ANS;
 
     public Text first, second, third, four,realans;
     public Text review1, review2, review3, review4;
@@ -29,7 +30,7 @@ public class AB12 : MonoBehaviour
     public GameObject Die_1;
     public GameObject Die_2;
     public Flowchart flow;
-    int x;
+    public int index;
 
 
     private void Start()
@@ -56,6 +57,7 @@ public class AB12 : MonoBehaviour
         randomArray[2] = 3;
         randomArray[3] = 4;
 
+        ANS[index].Select();
 
     }
 
@@ -93,13 +95,16 @@ public class AB12 : MonoBehaviour
             Player.transform.position = deadPoint.transform.position;
 
         }
-        
     }
-
-    //public void Entering()
-    //{
-    //    activated = true;
-    //}
+    public void ChangeByUI()
+    {
+        // 編號遞增
+        index++;
+        // 避免跑出陣列外
+        if (index == ANS.Length) index = 0;
+        // 選取
+        ANS[index].Select();
+    }
 
     public void EnterAnswer()
     {
