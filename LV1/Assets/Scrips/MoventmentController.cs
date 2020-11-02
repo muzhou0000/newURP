@@ -12,7 +12,8 @@ public class MoventmentController : MonoBehaviour
     private CharacterController characterController;
 
     private Vector3 desiredMoveDirection;
-
+    public bool P_Jump;
+    public bool P_Run;
     public Animator ani;
     public float JumpPower;
     public float RunSpeed;
@@ -41,9 +42,30 @@ public class MoventmentController : MonoBehaviour
         InputX = Input.GetAxis("Horizontal");
         InputZ = Input.GetAxis("Vertical");
 
-       
-        MovementController();
+        if (characterController.isGrounded&&gravity==0&& Input.GetKeyDown(KeyCode.Space))
+        {
+                P_Jump = true;
+                ani.SetTrigger("跳");
+                ani.SetBool("Idle", false);
+        }
+        else
+        {
+            ani.SetBool("Idle", true);
+        }
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            P_Run = true;
+        }
+        else
+        {
+            P_Run = false;
+        }
+        //MovementController();
 
+    }
+    private void FixedUpdate()
+    {
+        MovementController();
     }
     void InputDecider()
     {
@@ -80,7 +102,7 @@ public class MoventmentController : MonoBehaviour
         gravity -= 100f* Time.deltaTime*Time.fixedDeltaTime;
         gravity = gravity * gravityMultipler;
 
-        Vector3 moveDirection = desiredMoveDirection * (movementSpeed*Time.deltaTime)*0.08f;
+        Vector3 moveDirection = desiredMoveDirection * (movementSpeed* Time.fixedDeltaTime) *0.08f;
         moveDirection = new Vector3  (moveDirection.x, gravity, moveDirection.z);
         
         characterController.Move(moveDirection);
@@ -88,45 +110,40 @@ public class MoventmentController : MonoBehaviour
         ani.SetBool("走路", moveDirection.x !=0);
         ani.SetBool("Idle", false);
 
+        characterController.Move(moveDirection);
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (P_Run && moveDirection.x != 0)
         {
-            moveDirection = desiredMoveDirection * (RunSpeed * Time.deltaTime) * 0.08f;
+            moveDirection = desiredMoveDirection * (RunSpeed * Time.fixedDeltaTime) * 0.08f;
             moveDirection = new Vector3(moveDirection.x, gravity, moveDirection.z);
-
-            characterController.Move(moveDirection);
             ani.SetBool("跑步", true);
         }
         else
         {
             ani.SetBool("跑步", false);
         }
-
-    }
-    void Jump()
-    {
         if (characterController.isGrounded)
         {
             gravity = 0;
-            if (Input.GetKeyDown(KeyCode.Space) && gravity == 0)
-            {
-                gravity += (JumpPower * Time.fixedDeltaTime) *0.08f ;
-                ani.SetTrigger("跳");
-                ani.SetBool("Idle", false);
-            }
-            else
-            {
-                ani.SetBool("Idle", true);
-            }
         }
+    }
+    void Jump()
+    {
+        if (P_Jump)
+        {
+            gravity += (JumpPower * Time.fixedDeltaTime) * 0.08f;
+            P_Jump = false;
+        }
+
+
     }
     void  MovementController()
     {
         if(Talk.GetBooleanVariable("對話中") ==false)
         {
             MovementManager();
-            Jump();
             InputDecider();
+            Jump();
         }
         if (Talk.GetBooleanVariable("對話中") == true)
         {
