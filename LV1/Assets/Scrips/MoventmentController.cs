@@ -110,7 +110,6 @@ public class MoventmentController : MonoBehaviour
         ani.SetBool("走路", moveDirection.x !=0);
         ani.SetBool("Idle", false);
 
-        characterController.Move(moveDirection);
 
         if (P_Run && moveDirection.x != 0)
         {
@@ -122,6 +121,9 @@ public class MoventmentController : MonoBehaviour
         {
             ani.SetBool("跑步", false);
         }
+
+        characterController.Move(moveDirection);
+
         if (characterController.isGrounded)
         {
             gravity = 0;
