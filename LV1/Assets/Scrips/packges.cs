@@ -13,10 +13,11 @@ public class packges : MonoBehaviour
     public Flowchart fade_in;
     public GameObject Gam_fade_in, Instructions;
     int check_number = 0;
-
+    public Animator STB;
     void FixedUpdate()
     {
         Invoke("endUIStart_1", 6.5f);
+       
 
     }
     void endUIStart_1()
@@ -29,9 +30,9 @@ public class packges : MonoBehaviour
             Invoke("endUIStart_2", 42);
             if (check_number == 1&& Input.GetKeyDown(KeyCode.R))
             {
-                Instructions.SetActive(false);
-
+            Instructions.SetActive(false);
             }
+            
         }
     }
 
