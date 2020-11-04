@@ -16,11 +16,13 @@ public class V_Follow : MonoBehaviour
     void Update()
     {
         
+
     }
     public void Follow(Vector3 pos,float speed)
     {
         Vector3 position = pos - Vector3.forward * curDis;
-        V.position = Vector3.Lerp(V.position, position, Time.deltaTime);
+        position.x = -1323.07f;
+        V.position = Vector3.Lerp(V.position, position, 1.5f*Time.deltaTime);
     }
     private void OnCollisionEnter(Collision other)
     {

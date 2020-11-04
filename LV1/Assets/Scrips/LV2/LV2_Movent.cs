@@ -69,7 +69,7 @@ public class LV2_Movent : MonoBehaviour
             }
         }
 
-        V.Follow(transform.position,movementSpeed);
+        V.Follow(transform.position,RunSpeed);
     }
     void InputDecider()
     {
@@ -118,23 +118,23 @@ public class LV2_Movent : MonoBehaviour
         {
             gravity = 0;
         }
-
-        ani.SetBool("走路", moveDirection.x != 0);
+        ani.SetBool("走路",true);
+        ani.SetBool("跑步", moveDirection.z != 0);
         ani.SetBool("Idle", false);
 
 
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            moveDirection = desiredMoveDirection * (RunSpeed * Time.deltaTime) * 0.08f;
-            moveDirection = new Vector3(moveDirection.x, gravity, moveDirection.z);
+        //if (Input.GetKey(KeyCode.LeftShift))
+        //{
+        //    moveDirection = desiredMoveDirection * (RunSpeed * Time.deltaTime) * 0.08f;
+        //    moveDirection = new Vector3(moveDirection.x, gravity, moveDirection.z);
 
-            characterController.Move(moveDirection);
-            ani.SetBool("跑步", true);
-        }
-        else
-        {
-            ani.SetBool("跑步", false);
-        }
+        //    characterController.Move(moveDirection);
+        //    ani.SetBool("跑步", true);
+        //}
+        //else
+        //{
+        //    ani.SetBool("跑步", false);
+        //}
 
     }
     void Jump()
