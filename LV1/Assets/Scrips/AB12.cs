@@ -67,10 +67,10 @@ public class AB12 : MonoBehaviour
     }
     private void Update()
     {
-        
+
         Calculation();
         print(a);
-        if (times<=5&&a == 4)
+        if (times <= 5 && a == 4)
         {
             AB.SetActive(false);
             Cam.SetActive(false);
@@ -95,6 +95,11 @@ public class AB12 : MonoBehaviour
             Player.transform.position = deadPoint.transform.position;
 
         }
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
+        {
+            EnterAnswer();
+            ccc();
+        }
     }
     public void ChangeByUI()
     {
@@ -112,16 +117,16 @@ public class AB12 : MonoBehaviour
         {
             switch (times)
             { 
-                case 4:
+                case 3:
                     four.text = enterText1.text + enterText2.text + enterText3.text + enterText4.text;
                     break;
-                case 3:
+                case 2:
                     third.text = enterText1.text + enterText2.text + enterText3.text + enterText4.text;
                     break;
-                case 2:
+                case 1:
                     second.text = enterText1.text + enterText2.text + enterText3.text + enterText4.text;
                     break;
-                case 1:
+                case 0:
                     first.text = enterText1.text+ enterText2.text+ enterText3.text+ enterText4.text;
                     break;
             }
@@ -151,19 +156,19 @@ public class AB12 : MonoBehaviour
         {
             switch (times)
             {
-                case 4:
+                case 3:
                     check();
                     review4.text = (a + "A" + b + "B");
                     break;
-                case 3:
+                case 2:
                     check();
                     review3.text = (a + "A" + b + "B");
                     break;
-                case 2:
+                case 1:
                     check();
                     review2.text = (a + "A" + b + "B");
                     break;
-                case 1:
+                case 0:
                     check();
                     review1.text = (a + "A" + b + "B");
                     break;
