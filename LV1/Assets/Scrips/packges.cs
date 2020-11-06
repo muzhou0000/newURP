@@ -17,8 +17,15 @@ public class packges : MonoBehaviour
     void FixedUpdate()
     {
         Invoke("endUIStart_1", 6.5f);
-       
-
+        if (STB.GetBool("min"))
+        {
+            Invoke("endUIStart_2", 18.017f);
+            check_number = 1;
+            if (check_number == 1 && Input.GetKeyDown(KeyCode.R))
+            {
+                Instructions.SetActive(false);
+            }
+        }
     }
     void endUIStart_1()
     {
@@ -27,30 +34,16 @@ public class packges : MonoBehaviour
             fade_in.SetBooleanVariable("淡出", true);
             flow.SetBooleanVariable("開頭",true);
             Invoke("wait", 1);
-            Invoke("endUIStart_2", 42);
-            if (check_number == 1&& Input.GetKeyDown(KeyCode.R))
-            {
-            Instructions.SetActive(false);
-            }
-            
         }
     }
-
     void wait()
     {
         start.SetBool("start", true);
     }
-    void Fadeout()
-    {
-        fade_in.SetBooleanVariable("淡出", true);
-    }
 
     void endUIStart_2()
     {
-
         UI_Start.SetActive(false);
-        check_number = 1;
-        
 
     }
 }
