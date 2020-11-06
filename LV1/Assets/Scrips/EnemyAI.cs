@@ -44,7 +44,7 @@ public class EnemyAI : MonoBehaviour
                 _targetWayPoint = _targetWayPoint.NextWayPoint;
             }
             transform.LookAt(_targetWayPoint.transform.position);
-            transform.Translate(Vector3.forward * Time.deltaTime * 10f, Space.Self);
+            transform.Translate(Vector3.forward * Time.deltaTime * 12f, Space.Self);
         }
     }
     public void Attack()
@@ -53,7 +53,7 @@ public class EnemyAI : MonoBehaviour
         {
             Vector3 x = _playerPoint.transform.position;
             //transform.LookAt(_playerPoint.transform.position);
-            transform.Translate(Vector3.forward * Time.deltaTime * 10f, Space.Self);
+            transform.Translate(Vector3.forward * Time.deltaTime * 12f, Space.Self);
             GG.SetActive(true);
             //GameObject.Find("DeadCheckPoint").SendMessage("DeadInWare");
             //Invoke("EndGG", 3);
