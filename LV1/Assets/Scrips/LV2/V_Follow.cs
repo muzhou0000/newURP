@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class V_Follow : MonoBehaviour
 {
@@ -29,6 +31,10 @@ public class V_Follow : MonoBehaviour
         if(other.gameObject.tag=="a")
         {
             Destroy(other.gameObject);
+        }
+        if(other.gameObject.tag=="Player")
+        {
+            SceneManager.LoadScene("LV2");
         }
     }
 }
