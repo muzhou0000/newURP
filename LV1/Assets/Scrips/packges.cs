@@ -21,10 +21,10 @@ public class packges : MonoBehaviour
         {
             Invoke("endUIStart_2", 18.017f);
             check_number = 1;
-            if (check_number == 1 && Input.GetKeyDown(KeyCode.R))
-            {
-                Instructions.SetActive(false);
-            }
+        }
+        if (check_number == 1 && Input.GetKeyDown(KeyCode.R))
+        {
+            Instructions.SetActive(false);
         }
     }
     void endUIStart_1()
