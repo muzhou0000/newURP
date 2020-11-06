@@ -12,15 +12,14 @@ public class packges : MonoBehaviour
     public Flowchart flow;
     public Flowchart fade_in;
     public GameObject Gam_fade_in, Instructions;
-    int check_number = 0;
+    public int check_number = 0;
     public Animator STB;
     void FixedUpdate()
     {
         Invoke("endUIStart_1", 6.5f);
         if (STB.GetBool("min"))
         {
-            Invoke("endUIStart_2", 18.017f);
-            check_number = 1;
+            Invoke("endUIStart_2", 31);
         }
         if (check_number == 1 && Input.GetKeyDown(KeyCode.R))
         {
@@ -43,7 +42,7 @@ public class packges : MonoBehaviour
 
     void endUIStart_2()
     {
+        check_number = 1;
         UI_Start.SetActive(false);
-
     }
 }
