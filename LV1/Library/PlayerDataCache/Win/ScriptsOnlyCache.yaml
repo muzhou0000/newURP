@@ -3,7 +3,6 @@ ScriptsOnlyBuild:
     Assembly-CSharp-Editor.dll:
     - Fungus.EditorUtils.BlockEditor
     - Fungus.EditorUtils.BlockInspector
-    - Fungus.EditorUtils.FlowchartWindow
     - Fungus.EditorUtils.FungusEditorResources
     Assembly-CSharp.dll:
     - AB12
@@ -21,7 +20,6 @@ ScriptsOnlyBuild:
     - Fungus.Character
     - Fungus.Clickable2D
     - Fungus.ColliderVariable
-    - Fungus.CommandCopyBuffer
     - Fungus.CustomTag
     - Fungus.Destroy
     - Fungus.DialogInput
@@ -144,10 +142,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -3760,4 +3756,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/MGR.unity
-  playerPath: C:/Users/bono6/Downloads/LV1/MGR.exe
+  playerPath: C:/Users/Maxabc/Desktop/LV2_RE/MGR.exe
