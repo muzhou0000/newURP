@@ -99,6 +99,7 @@ public class AB12 : MonoBehaviour
         {
             EnterAnswer();
             ccc();
+            ANS[index].Select();
         }
     }
     public void ChangeByUI()
@@ -142,11 +143,14 @@ public class AB12 : MonoBehaviour
         //ansArrary[2] = (ans / 10) % 10;
         //ansArrary[3] = ans % 10;
 
+        if(enterText1.text != null&& enterText2.text != null && enterText3.text != null && enterText4.text != null) 
+        { 
             ansArrary[0] = int.Parse(enterText1.text);
             ansArrary[1] = int.Parse(enterText2.text);
             ansArrary[2] = int.Parse(enterText3.text);
             ansArrary[3] = int.Parse(enterText4.text);
-        
+        }
+
 
     }
  
