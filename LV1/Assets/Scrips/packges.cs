@@ -3,16 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class packges : MonoBehaviour
 {
     public GameObject UI_Start;
-    public int menu;
+    public Flowchart Introduction;
     public Animator start;
-    public Flowchart flow;
-    public Flowchart fade_in;
-    public GameObject Gam_fade_in, Instructions;
-    public int check_number = 0;
     public Animator STB;
     void FixedUpdate()
     {
@@ -21,28 +18,29 @@ public class packges : MonoBehaviour
         {
             Invoke("endUIStart_2", 31);
         }
-        if (check_number == 1 && Input.GetKeyDown(KeyCode.R))
-        {
-            Instructions.SetActive(false);
-        }
     }
     void endUIStart_1()
     {
-        if (Input.anyKeyDown)//如果按下任意鈕
+        if (Input.anyKeyDown)
         {
-            fade_in.SetBooleanVariable("淡出", true);
-            flow.SetBooleanVariable("開頭",true);
-            Invoke("wait", 1);
+            Invoke("wait", 0.5f);
         }
     }
     void wait()
     {
         start.SetBool("start", true);
+        Invoke("PlayIntroduction", 4.2f);
+
     }
+    void PlayIntroduction()
+    {
+        Introduction.ExecuteBlock("Introduction");
+
+    }
+
 
     void endUIStart_2()
     {
-        check_number = 1;
-        UI_Start.SetActive(false);
+        SceneManager.LoadScene(1);
     }
 }
