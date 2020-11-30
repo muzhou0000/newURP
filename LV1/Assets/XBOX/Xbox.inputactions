@@ -1,0 +1,83 @@
+{
+    "name": "Xbox",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "b021f8de-c01d-4bec-a810-93286479a79e",
+            "actions": [
+                {
+                    "name": " MovementManager",
+                    "type": "Value",
+                    "id": "920c4462-1070-4694-9697-951620771ddf",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "2D Vector",
+                    "id": "06d48d1b-92cb-4c5e-a245-3c5e4c556781",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": " MovementManager",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "95027845-590b-4c4b-9d51-626ef481d402",
+                    "path": "<XInputController>/rightStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "xbox",
+                    "action": " MovementManager",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "1a46b589-0645-4423-abea-84cee6507f4c",
+                    "path": "<Joystick>/stick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "xbox",
+                    "action": " MovementManager",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "8969296d-6b0d-45b0-bc36-5e4bf07688d2",
+                    "path": "<Gamepad>/rightStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "xbox",
+                    "action": " MovementManager",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "1e8f16d1-7495-45f7-9bfe-558436674353",
+                    "path": "<Gamepad>/rightStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "xbox",
+                    "action": " MovementManager",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "xbox",
+            "bindingGroup": "xbox",
+            "devices": []
+        }
+    ]
+}
