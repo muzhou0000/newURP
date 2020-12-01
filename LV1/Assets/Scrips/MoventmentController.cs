@@ -52,7 +52,7 @@ public class MoventmentController : MonoBehaviour
         {
             ani.SetBool("Idle", true);
         }
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift)||Input.GetButton("XboxB"))
         {
             P_Run = true;
         }
