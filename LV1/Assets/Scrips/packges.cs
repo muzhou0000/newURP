@@ -2,15 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class packges : MonoBehaviour
 {
     public GameObject UI_Start;
     public Flowchart Introduction;
     public Animator start;
     public Animator STB;
+
     void FixedUpdate()
     {
         Invoke("endUIStart_1", 6.5f);
@@ -35,10 +35,7 @@ public class packges : MonoBehaviour
     void PlayIntroduction()
     {
         Introduction.ExecuteBlock("Introduction");
-
     }
-
-
     void endUIStart_2()
     {
         SceneManager.LoadScene(1);
