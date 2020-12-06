@@ -42,7 +42,8 @@ public class MoventmentController : MonoBehaviour
         InputX = Input.GetAxis("Horizontal");
         InputZ = Input.GetAxis("Vertical");
 
-        if (characterController.isGrounded&&gravity==0&& Input.GetKeyDown(KeyCode.Space))
+        if (characterController.isGrounded&&gravity==0&& Input.GetKeyDown(KeyCode.Space)
+            ||characterController.isGrounded && gravity == 0 && Input.GetButtonDown("XboxB"))
         {
                 P_Jump = true;
                 ani.SetTrigger("跳");
@@ -52,7 +53,7 @@ public class MoventmentController : MonoBehaviour
         {
             ani.SetBool("Idle", true);
         }
-        if (Input.GetKey(KeyCode.LeftShift)||Input.GetButton("XboxB"))
+        if (Input.GetKey(KeyCode.LeftShift)| Mathf.Round(Input.GetAxisRaw("XboxRT")) > 0)
         {
             P_Run = true;
         }

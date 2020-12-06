@@ -6,6 +6,8 @@ using Cinemachine;
 public class Cam_Reset : MonoBehaviour
 {
     public GameObject Cam;
+    public float X_angle ;
+
     void Update()
     {
         //Cam.GetComponent<CinemachineFreeLook>().m_XAxis.Value = -90;
@@ -14,7 +16,7 @@ public class Cam_Reset : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            Cam.GetComponent<CinemachineFreeLook>().m_XAxis.Value = -90;
+            Cam.GetComponent<CinemachineFreeLook>().m_XAxis.Value = X_angle;
         }
     }
 }

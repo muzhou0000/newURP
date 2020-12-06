@@ -98,7 +98,7 @@ namespace Fungus
             case ClickMode.Disabled:
                 break;
             case ClickMode.ClickAnywhere:
-                if (Input.GetKeyDown(KeyCode.R) || Input.GetMouseButtonDown(0)||Input.GetButton("XboxA"))
+                if (Input.GetKeyDown(KeyCode.R) || Input.GetMouseButtonDown(0)||Input.GetButtonDown("XboxA"))
                 {
                     SetNextLineFlag();
                 }
