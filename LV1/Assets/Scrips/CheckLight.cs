@@ -15,6 +15,8 @@ public class CheckLight : MonoBehaviour
     public GameObject Flash;
     public GameObject Cam_1;
     public GameObject Emeny;
+    public float xAix, yAix;
+    int Xnum, Ynum;
 
     void Start()
     {
@@ -27,39 +29,42 @@ public class CheckLight : MonoBehaviour
         check7.enabled = false;
         check8.enabled = false;
         check9.enabled = false;
-
-
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Keypad1)) {
+        inputNum();
+        xAix = Input.GetAxis("Horizontal");
+        yAix = Input.GetAxis("Vertical");
+
+
+        if (Input.GetKeyDown(KeyCode.Keypad1)||(xAix==-1&&yAix==-1 && Input.GetButtonDown("XboxA"))) {
 
         check1.enabled = !check1.enabled;
         check4.enabled = !check4.enabled;
         check2.enabled = !check2.enabled;
         }
-        if (Input.GetKeyDown(KeyCode.Keypad2))
+        if (Input.GetKeyDown(KeyCode.Keypad2)||(xAix == 0 && yAix == -1 && Input.GetButtonDown("XboxA")))
         {
             check1.enabled = !check1.enabled;
             check2.enabled = !check2.enabled;
             check3.enabled = !check3.enabled;
             check5.enabled = !check5.enabled;
         }
-        if (Input.GetKeyDown(KeyCode.Keypad3))
+        if (Input.GetKeyDown(KeyCode.Keypad3) || (xAix == 1 && yAix == -1 && Input.GetButtonDown("XboxA")))
         {
             check3.enabled = !check3.enabled;
             check6.enabled = !check6.enabled;
             check2.enabled = !check2.enabled;
         }
-        if (Input.GetKeyDown(KeyCode.Keypad4))
+        if (Input.GetKeyDown(KeyCode.Keypad4) || (xAix == -1 && yAix == 0 && Input.GetButtonDown("XboxA")))
         {
             check7.enabled = !check7.enabled;
             check5.enabled = !check5.enabled;
             check1.enabled = !check1.enabled;
             check4.enabled = !check4.enabled;
         }
-        if (Input.GetKeyDown(KeyCode.Keypad5))
+        if (Input.GetKeyDown(KeyCode.Keypad5) || (xAix == 0 && yAix == 0&&Input.GetButtonDown("XboxA")))
         {
             check5.enabled = !check5.enabled;
             check6.enabled = !check6.enabled;
@@ -68,27 +73,27 @@ public class CheckLight : MonoBehaviour
             check2.enabled = !check2.enabled;
 
         }
-        if (Input.GetKeyDown(KeyCode.Keypad6))
+        if (Input.GetKeyDown(KeyCode.Keypad6) || (xAix == 1 && yAix == 0 && Input.GetButtonDown("XboxA")))
         {
             check6.enabled = !check6.enabled;
             check3.enabled = !check3.enabled;
             check5.enabled = !check5.enabled;
             check9.enabled = !check9.enabled;
         }
-        if (Input.GetKeyDown(KeyCode.Keypad7))
+        if (Input.GetKeyDown(KeyCode.Keypad7) || (xAix ==-1 && yAix == 1 && Input.GetButtonDown("XboxA")))
         {
             check7.enabled = !check7.enabled;
             check4.enabled = !check4.enabled;
             check8.enabled = !check8.enabled;
         }
-        if (Input.GetKeyDown(KeyCode.Keypad8))
+        if (Input.GetKeyDown(KeyCode.Keypad8) || (xAix == 0 && yAix == 1 && Input.GetButtonDown("XboxA")))
         {
             check8.enabled = !check8.enabled;
             check5.enabled = !check5.enabled;
             check7.enabled = !check7.enabled;
             check9.enabled = !check9.enabled;
         }
-        if (Input.GetKeyDown(KeyCode.Keypad9))
+        if (Input.GetKeyDown(KeyCode.Keypad9) || (xAix == 1 && yAix == 1 && Input.GetButtonDown("XboxA")))
         {
             check9.enabled = !check9.enabled;
             check6.enabled = !check6.enabled;
@@ -107,7 +112,7 @@ public class CheckLight : MonoBehaviour
             //AB.SetActive(true);
         }
        
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R)||Input.GetButtonDown("XboxB"))
         {
             check1.enabled = false;
             check2.enabled = false;
@@ -120,5 +125,10 @@ public class CheckLight : MonoBehaviour
             check9.enabled = false;
         }
     }
-    
+    void inputNum()
+    {
+        Debug.Log("X="+Xnum);
+        Debug.Log("Y="+Ynum);
+
+    }
 }
