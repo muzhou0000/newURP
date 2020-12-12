@@ -44,7 +44,7 @@ public class EnemyAI : MonoBehaviour
                 _targetWayPoint = _targetWayPoint.NextWayPoint;
             }
             transform.LookAt(_targetWayPoint.transform.position);
-            transform.Translate(Vector3.forward * Time.deltaTime * 12f, Space.Self);
+            transform.Translate(Vector3.forward * Time.deltaTime * 17.5f, Space.Self);
         }
     }
     public void Attack()
