@@ -13,8 +13,8 @@ public class LightUI : MonoBehaviour
     }
     void Update()
     {
-        xAix = Input.GetAxis("Horizontal");
-        yAix = Input.GetAxis("Vertical");
+        xAix = Input.GetAxisRaw("Horizontal");
+        yAix = Input.GetAxisRaw("Vertical");
 
         Vector3 apos = UImove.position;
 

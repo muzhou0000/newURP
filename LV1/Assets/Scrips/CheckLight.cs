@@ -33,9 +33,9 @@ public class CheckLight : MonoBehaviour
 
     void Update()
     {
-        inputNum();
-        xAix = Input.GetAxis("Horizontal");
-        yAix = Input.GetAxis("Vertical");
+        intnum();
+        xAix = Input.GetAxisRaw("Horizontal");
+        yAix = Input.GetAxisRaw("Vertical");
 
 
         if (Input.GetKeyDown(KeyCode.Keypad1)||(xAix==-1&&yAix==-1 && Input.GetButtonDown("XboxA"))) {
@@ -125,10 +125,43 @@ public class CheckLight : MonoBehaviour
             check9.enabled = false;
         }
     }
-    void inputNum()
+    void intnum()
     {
-        Debug.Log("X="+Xnum);
-        Debug.Log("Y="+Ynum);
-
+        if (xAix > 0)
+        {
+            Xnum += 1;
+            
+        }
+        else if (xAix < 0)
+        {
+            Xnum -= 1;
+            
+        }
+        if (Xnum >= 1)
+        {
+            Xnum = 1;
+        }
+        if (Xnum < -1)
+        {
+            Xnum = -1;
+        }
+        if (yAix > 0)
+        {
+            Ynum += 1;  
+        }
+        else if (yAix < 0)
+        {
+            Ynum -= 1;   
+        }
+        if (Ynum > 1)
+        {
+            Ynum = 1;
+        }
+        if (Ynum < -1)
+        {
+            Ynum = -1;
+        }
+        Debug.Log("xnum=" + Xnum);
+        Debug.Log("yum=" + Ynum);
     }
 }
