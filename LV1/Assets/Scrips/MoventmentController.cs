@@ -147,12 +147,16 @@ public class MoventmentController : MonoBehaviour
             MovementManager();
             InputDecider();
             Jump();
+            Cam.GetComponent<CinemachineFreeLook>().m_XAxis.m_MaxSpeed = 3000;
+            Cam.GetComponent<CinemachineFreeLook>().m_YAxis.m_MaxSpeed = 25;
         }
         if (Talk.GetBooleanVariable("對話中") == true)
         {
             ani.SetBool("Idle", true);
             ani.SetBool("跑步", false);
             ani.SetBool("走路", false);
+            Cam.GetComponent<CinemachineFreeLook>().m_XAxis.m_MaxSpeed = 0;
+            Cam.GetComponent<CinemachineFreeLook>().m_YAxis.m_MaxSpeed = 0;
         }
 
     }

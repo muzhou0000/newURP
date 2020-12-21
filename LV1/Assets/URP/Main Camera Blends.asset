@@ -97,7 +97,18 @@ MonoBehaviour:
     m_To: warehoureUSB_CAM
     m_Blend:
       m_Style: 1
-      m_Time: 4
+      m_Time: 1
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: warehoureUSB_CAM
+    m_To: "\u7B2C\u4E09\u4EBA\u7A31\u651D\u6A5F"
+    m_Blend:
+      m_Style: 1
+      m_Time: 0.5
       m_CustomCurve:
         serializedVersion: 2
         m_Curve: []
