@@ -14,13 +14,13 @@ public class ItemManager : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetButtonDown("XboxRB")&& Item[x].activeSelf)
+        if (Input.GetButtonDown("XboxRB")&& Item[x])
         {
             x += 1;
             y += 1;
             ChangeColor();
         }
-        if (Tip[y].activeSelf && Input.GetButton("XboxA"))
+        if (Tip[y] && Input.GetButton("XboxA"))
         {
             Item[x].GetComponent<Image>().color = UnenbleButton;
             Tip[y].SetActive(false);
