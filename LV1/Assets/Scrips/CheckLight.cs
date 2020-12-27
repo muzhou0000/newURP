@@ -7,7 +7,7 @@ public class CheckLight : MonoBehaviour
 {
 
     public Light check1, check2, check3, check4, check5, check6, check7, check8, check9;
-    public GameObject countdown;
+    public GameObject countdown,LightUI;
     public GameObject GG;
     public GameObject Player;
     public GameObject Cam;
@@ -16,7 +16,8 @@ public class CheckLight : MonoBehaviour
     public GameObject Cam_1;
     public GameObject Emeny;
     public float xAix, yAix;
-    int Xnum, Ynum;
+    public static int Xnum, Ynum;
+    bool addx,addy;
 
     void Start()
     {
@@ -37,68 +38,7 @@ public class CheckLight : MonoBehaviour
         xAix = Input.GetAxisRaw("Horizontal");
         yAix = Input.GetAxisRaw("Vertical");
 
-
-        if (Input.GetKeyDown(KeyCode.Keypad1)||(xAix==-1&&yAix==-1 && Input.GetButtonDown("XboxA"))) {
-
-        check1.enabled = !check1.enabled;
-        check4.enabled = !check4.enabled;
-        check2.enabled = !check2.enabled;
-        }
-        if (Input.GetKeyDown(KeyCode.Keypad2)||(xAix == 0 && yAix == -1 && Input.GetButtonDown("XboxA")))
-        {
-            check1.enabled = !check1.enabled;
-            check2.enabled = !check2.enabled;
-            check3.enabled = !check3.enabled;
-            check5.enabled = !check5.enabled;
-        }
-        if (Input.GetKeyDown(KeyCode.Keypad3) || (xAix == 1 && yAix == -1 && Input.GetButtonDown("XboxA")))
-        {
-            check3.enabled = !check3.enabled;
-            check6.enabled = !check6.enabled;
-            check2.enabled = !check2.enabled;
-        }
-        if (Input.GetKeyDown(KeyCode.Keypad4) || (xAix == -1 && yAix == 0 && Input.GetButtonDown("XboxA")))
-        {
-            check7.enabled = !check7.enabled;
-            check5.enabled = !check5.enabled;
-            check1.enabled = !check1.enabled;
-            check4.enabled = !check4.enabled;
-        }
-        if (Input.GetKeyDown(KeyCode.Keypad5) || (xAix == 0 && yAix == 0&&Input.GetButtonDown("XboxA")))
-        {
-            check5.enabled = !check5.enabled;
-            check6.enabled = !check6.enabled;
-            check8.enabled = !check8.enabled;
-            check4.enabled = !check4.enabled;
-            check2.enabled = !check2.enabled;
-
-        }
-        if (Input.GetKeyDown(KeyCode.Keypad6) || (xAix == 1 && yAix == 0 && Input.GetButtonDown("XboxA")))
-        {
-            check6.enabled = !check6.enabled;
-            check3.enabled = !check3.enabled;
-            check5.enabled = !check5.enabled;
-            check9.enabled = !check9.enabled;
-        }
-        if (Input.GetKeyDown(KeyCode.Keypad7) || (xAix ==-1 && yAix == 1 && Input.GetButtonDown("XboxA")))
-        {
-            check7.enabled = !check7.enabled;
-            check4.enabled = !check4.enabled;
-            check8.enabled = !check8.enabled;
-        }
-        if (Input.GetKeyDown(KeyCode.Keypad8) || (xAix == 0 && yAix == 1 && Input.GetButtonDown("XboxA")))
-        {
-            check8.enabled = !check8.enabled;
-            check5.enabled = !check5.enabled;
-            check7.enabled = !check7.enabled;
-            check9.enabled = !check9.enabled;
-        }
-        if (Input.GetKeyDown(KeyCode.Keypad9) || (xAix == 1 && yAix == 1 && Input.GetButtonDown("XboxA")))
-        {
-            check9.enabled = !check9.enabled;
-            check6.enabled = !check6.enabled;
-            check8.enabled = !check8.enabled;
-        }
+        LightCheck();
 
         if (check1.enabled && check2.enabled && check3.enabled && check4.enabled && check5.enabled && check6.enabled && check7.enabled && check8.enabled && check9.enabled)
         {
@@ -110,8 +50,10 @@ public class CheckLight : MonoBehaviour
             Cam_1.SetActive(true);
             Emeny.SetActive(false);
             //AB.SetActive(true);
+            LightUI.SetActive(false);
+
         }
-       
+
         if (Input.GetKeyDown(KeyCode.R)||Input.GetButtonDown("XboxB"))
         {
             check1.enabled = false;
@@ -127,41 +69,115 @@ public class CheckLight : MonoBehaviour
     }
     void intnum()
     {
-        if (xAix > 0)
+
+        if (xAix > 0 && addx)
         {
-            Xnum += 1;
-            
+            Xnum++;
+            addx = false;
+            if (Xnum > 1)
+            {
+                Xnum = 1;
+            }
         }
-        else if (xAix < 0)
+        else if (xAix == 0 && !addx)
         {
-            Xnum -= 1;
-            
+            addx = true;
         }
-        if (Xnum >= 1)
+        else if (xAix < 0 && addx)
         {
-            Xnum = 1;
+            Xnum--;
+            addx = false;
+            if (Xnum < 1)
+            {
+                Xnum = -1;
+            }
         }
-        if (Xnum < -1)
+        if (yAix > 0 && addy)
         {
-            Xnum = -1;
+            Ynum++;
+            addy = false;
+            if (Ynum > 1)
+            {
+                Ynum = 1;
+            }
         }
-        if (yAix > 0)
+        else if (yAix == 0 && !addy)
         {
-            Ynum += 1;  
+            addy = true;
         }
-        else if (yAix < 0)
+        else if (yAix < 0 && addy)
         {
-            Ynum -= 1;   
+            Ynum--;
+            addy = false;
+            if (Ynum < 1)
+            {
+                Ynum = -1;
+            }
         }
-        if (Ynum > 1)
+    }
+    void LightCheck()
+    {
+        if (Input.GetKeyDown(KeyCode.Keypad1) || (Xnum == -1 && Ynum == -1 && Input.GetButtonDown("XboxA")))
         {
-            Ynum = 1;
+
+            check1.enabled = !check1.enabled;
+            check4.enabled = !check4.enabled;
+            check2.enabled = !check2.enabled;
         }
-        if (Ynum < -1)
+        if (Input.GetKeyDown(KeyCode.Keypad2) || (Xnum == 0 && Ynum == -1 && Input.GetButtonDown("XboxA")))
         {
-            Ynum = -1;
+            check1.enabled = !check1.enabled;
+            check2.enabled = !check2.enabled;
+            check3.enabled = !check3.enabled;
+            check5.enabled = !check5.enabled;
         }
-        Debug.Log("xnum=" + Xnum);
-        Debug.Log("yum=" + Ynum);
+        if (Input.GetKeyDown(KeyCode.Keypad3) || (Xnum == 1 && Ynum == -1 && Input.GetButtonDown("XboxA")))
+        {
+            check3.enabled = !check3.enabled;
+            check6.enabled = !check6.enabled;
+            check2.enabled = !check2.enabled;
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad4) || (Xnum == -1 && Ynum == 0 && Input.GetButtonDown("XboxA")))
+        {
+            check7.enabled = !check7.enabled;
+            check5.enabled = !check5.enabled;
+            check1.enabled = !check1.enabled;
+            check4.enabled = !check4.enabled;
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad5) || (Xnum == 0 && Ynum == 0 && Input.GetButtonDown("XboxA")))
+        {
+            check5.enabled = !check5.enabled;
+            check6.enabled = !check6.enabled;
+            check8.enabled = !check8.enabled;
+            check4.enabled = !check4.enabled;
+            check2.enabled = !check2.enabled;
+
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad6) || (Xnum == 1 && Ynum == 0 && Input.GetButtonDown("XboxA")))
+        {
+            check6.enabled = !check6.enabled;
+            check3.enabled = !check3.enabled;
+            check5.enabled = !check5.enabled;
+            check9.enabled = !check9.enabled;
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad7) || (Xnum == -1 && Ynum == 1 && Input.GetButtonDown("XboxA")))
+        {
+            check7.enabled = !check7.enabled;
+            check4.enabled = !check4.enabled;
+            check8.enabled = !check8.enabled;
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad8) || (Xnum == 0 && Ynum == 1 && Input.GetButtonDown("XboxA")))
+        {
+            check8.enabled = !check8.enabled;
+            check5.enabled = !check5.enabled;
+            check7.enabled = !check7.enabled;
+            check9.enabled = !check9.enabled;
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad9) || (Xnum == 1 && Ynum == 1 && Input.GetButtonDown("XboxA")))
+        {
+            check9.enabled = !check9.enabled;
+            check6.enabled = !check6.enabled;
+            check8.enabled = !check8.enabled;
+        }
     }
 }
