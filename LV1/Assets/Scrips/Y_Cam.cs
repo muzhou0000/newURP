@@ -6,9 +6,9 @@ using Fungus;
 public class Y_Cam : MonoBehaviour
 {
     public Flowchart Y;
-    public Flowchart talk;
-    public GameObject A;
-    public GameObject B;
+    //public Flowchart talk;
+    //public GameObject A;
+    //public GameObject B;
     public GameObject Cam;
     // Start is called before the first frame update
     void Start()
