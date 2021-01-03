@@ -51,7 +51,7 @@ public class AB12 : MonoBehaviour
     }
     private void Update()
     {
-        xAix = Input.GetAxisRaw("Horizontal");
+        xAix = Input.GetAxisRaw("XboxRL");
         yAix = Input.GetAxisRaw("Vertical");
         MoveAndAdd();
 
