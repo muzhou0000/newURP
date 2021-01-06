@@ -33,7 +33,9 @@ public class AB12 : MonoBehaviour
     float xAix, yAix;
     int Xnum;
     bool addx, addy;
-
+    Color ColorUnUse = new Color(0.504717f, 1, 0.9374379f, 0.2901961f);
+    Color ColorUsing = new Color(0.5058824f, 1, 0.5510341f, 0.2901961f);
+    public Image ima1, ima2, ima3, ima4;
 
 
 
@@ -113,7 +115,31 @@ public class AB12 : MonoBehaviour
 
             }
         }
-
+        if (Xnum == 0)
+        {
+            ima1.color = ColorUsing;
+            ima2.color = ColorUnUse;
+            ima3.color = ColorUnUse;
+            ima4.color = ColorUnUse;
+        }else if (Xnum == 1)
+        {
+            ima1.color = ColorUnUse;
+            ima2.color = ColorUsing;
+            ima3.color = ColorUnUse;
+            ima4.color = ColorUnUse;
+        }else if (Xnum == 2)
+        {
+            ima1.color = ColorUnUse;
+            ima2.color = ColorUnUse;
+            ima3.color = ColorUsing;
+            ima4.color = ColorUnUse;
+        }else if (Xnum == 3)
+        {
+            ima1.color = ColorUnUse;
+            ima2.color = ColorUnUse;
+            ima3.color = ColorUnUse;
+            ima4.color = ColorUsing;
+        }
         //分割線
 
         if (yAix > 0 && addy && Xnum == 0)
@@ -125,6 +151,7 @@ public class AB12 : MonoBehaviour
             }
             ansArrary[0].text = "" + a;
             addy = false;
+
 
         }
         else if (yAix == 0 && !addy && Xnum == 0) addy = true;
@@ -152,6 +179,7 @@ public class AB12 : MonoBehaviour
             ansArrary[1].text = "" + b;
             addy = false;
 
+
         }
         else if (yAix == 0 && !addy && Xnum == 1) addy = true;
         else if (yAix < 0 && addy && Xnum == 1)
@@ -163,6 +191,7 @@ public class AB12 : MonoBehaviour
             }
             ansArrary[1].text = "" + b;
             addy = false;
+
         }
         //分割線
 
@@ -176,6 +205,7 @@ public class AB12 : MonoBehaviour
             ansArrary[2].text = "" + c;
             addy = false;
 
+
         }
         else if (yAix == 0 && !addy && Xnum == 2) addy = true;
         else if (yAix < 0 && addy && Xnum == 2)
@@ -187,6 +217,7 @@ public class AB12 : MonoBehaviour
             }
             ansArrary[2].text = "" + c;
             addy = false;
+
         }
         //分割線
 
@@ -199,7 +230,7 @@ public class AB12 : MonoBehaviour
             }
             ansArrary[3].text = "" + d;
             addy = false;
-
+;
         }
         else if (yAix == 0 && !addy && Xnum == 3) addy = true;
         else if (yAix < 0 && addy && Xnum == 3)
@@ -211,6 +242,7 @@ public class AB12 : MonoBehaviour
             }
             ansArrary[3].text = "" + d;
             addy = false;
+
         }
     }
     public void EnterAnswer()

@@ -37,9 +37,6 @@ public class CheckLight : MonoBehaviour
         intnum();
         xAix = Input.GetAxisRaw("Horizontal");
         yAix = Input.GetAxisRaw("Vertical");
-
-        LightCheck();
-
         if (check1.enabled && check2.enabled && check3.enabled && check4.enabled && check5.enabled && check6.enabled && check7.enabled && check8.enabled && check9.enabled)
         {
             //countdown.SetActive(true);
@@ -52,6 +49,9 @@ public class CheckLight : MonoBehaviour
             //AB.SetActive(true);
             LightUI.SetActive(false);
 
+        }
+        if (!Player.activeSelf) { 
+        LightCheck();
         }
 
         if (Input.GetKeyDown(KeyCode.R)||Input.GetButtonDown("XboxB"))
@@ -115,7 +115,7 @@ public class CheckLight : MonoBehaviour
             }
         }
     }
-    void LightCheck()
+    public void LightCheck()
     {
         if (Input.GetKeyDown(KeyCode.Keypad1) || (Xnum == -1 && Ynum == -1 && Input.GetButtonDown("XboxA")))
         {
