@@ -17,18 +17,90 @@ MonoBehaviour:
     m_To: "\u53F3"
     m_Blend:
       m_Style: 1
-      m_Time: 1
+      m_Time: 0.1
       m_CustomCurve:
         serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 0
-        m_PostInfinity: 0
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 4.7058163
+          outSlope: 4.7058163
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.04947178
+          value: 0.23280512
+          inSlope: -0.0106140915
+          outSlope: -0.0106140915
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.21973209
+        - serializedVersion: 3
+          time: 0.3006236
+          value: 0.2497221
+          inSlope: 0.64700353
+          outSlope: 0.64700353
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.39227277
+          value: 0.0027459264
+          inSlope: 0.9670788
+          outSlope: 0.9670788
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.637022
+          value: 0.04396373
+          inSlope: 1.5936171
+          outSlope: 1.5936171
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.6634595
+          value: 0.2681068
+          inSlope: 2.5665646
+          outSlope: 2.5665646
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.95596653
+          value: 0.2685865
+          inSlope: 2.1818492
+          outSlope: 2.1818492
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 16.6104
+          outSlope: 16.6104
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
         m_RotationOrder: 0
   - m_From: "\u8FFD\u64CA\u651D\u5F71\u6A5F"
     m_To: "\u5DE6"
     m_Blend:
       m_Style: 1
-      m_Time: 1
+      m_Time: 0.1
       m_CustomCurve:
         serializedVersion: 2
         m_Curve: []
