@@ -57,7 +57,7 @@ public class LV2_Movent : MonoBehaviour
        
         if(characterController.isGrounded)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space)| Input.GetButtonDown("XboxB"))
             {
                 P_Jump = true;
                 ani.SetTrigger("跳");
