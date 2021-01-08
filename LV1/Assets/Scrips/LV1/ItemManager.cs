@@ -1,55 +1,29 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Hardware;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ItemManager : MonoBehaviour
 {
-    public GameObject[] Item = new GameObject[5], Tip= new GameObject[5];
-    //public GameObject Item_USB;
+    bool HaveUSB;
+    public GameObject UI_USB,UI_Tip1;
     Color EnbleButton = new Color(116,255,0,225);
     Color UnenbleButton = new Color(255, 255, 255, 255);
-    public static int x=-1,y;
     void Update()
     {
-        
-        if (Input.GetButtonDown("XboxRB")&& Item[x])
+        if (UI_USB.activeSelf)
         {
-            x += 1;
-            y += 1;
-            ChangeColor();
+            HaveUSB = true;
         }
-        if (Tip[y] && Input.GetButton("XboxA"))
+        if (Input.GetButtonDown("XboxRB")&& HaveUSB)
         {
-            Item[x].GetComponent<Image>().color = UnenbleButton;
-            Tip[y].SetActive(false);
-            x = 0;
-            y = 0;
+            UI_Tip1.SetActive(true);
         }
-    }
-    void ChangeColor()
-    {
-        switch (x)
+        if (UI_Tip1.activeSelf && Input.GetButton("XboxA"))
         {
-            case 2:
-                Item[x].GetComponent<Image>().color = EnbleButton;
-                Item[x-1].GetComponent<Image>().color = UnenbleButton;
-                Item[x].SetActive(true);
-                Tip[y].SetActive(true);
-                Tip[y-1].SetActive(false);
-                break;
-
-            case 1:
-                
-                Item[x].GetComponent<Image>().color = EnbleButton;
-                Tip[y].SetActive(true);
-                break;
-
-            case 0:
-                x = x + 1;
-                break;
-
+            UI_Tip1.SetActive(false);
         }
-    }
+    }  
 }
