@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class FileManger : MonoBehaviour
 {
-    public GameObject[] File;
-    Color EnbleButton = new Color(116, 255, 0, 225);
-    Color UnenbleButton = new Color(255, 255, 255, 255);
-    int FileCount = 0;
+    public GameObject File;
 
-    public void AddFile()
+    private void Update()
     {
-        for(int i = 0; i < File.Length; i++)
+        if(Input.GetButtonDown("XboxLB"))
         {
+            File.SetActive(true);
+        }
+        else if (Input.GetButtonUp("XboxA")){
+            File.SetActive(false);
+
         }
     }
 }

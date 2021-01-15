@@ -11,18 +11,6 @@ public class Mouse : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;//把滑鼠鎖定到螢幕中間
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-        }
-    }
 
 }
