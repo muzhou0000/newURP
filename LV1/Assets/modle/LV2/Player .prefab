@@ -461,6 +461,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d59a4c2ad7062c34293b54756a772398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  P_Jump: 0
+  P_Run: 0
   ani: {fileID: 6504228057544190624}
   JumpPower: 245
   RunSpeed: 260
