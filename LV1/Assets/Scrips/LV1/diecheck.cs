@@ -9,11 +9,11 @@ public class diecheck : MonoBehaviour
     public Transform roof_dead;
     public GameObject GG;
 
-    void DeadInWare()
-    {
-        Player.transform.position = ware_dead.position;
-        Player.transform.rotation = ware_dead.rotation;
-    }
+    //void DeadInWare()
+    //{
+    //    Player.transform.position = ware_dead.position;
+    //    Player.transform.rotation = ware_dead.rotation;
+    //}
 
     void DeadInRoof()
     {
