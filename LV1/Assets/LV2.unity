@@ -918,7 +918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 896461748}
+  selectedFlowchart: {fileID: 217425759}
 --- !u!4 &117860003
 Transform:
   m_ObjectHideFlags: 1
@@ -1947,8 +1947,7 @@ MonoBehaviour:
     height: 0
   selectedBlocks:
   - {fileID: 217425757}
-  selectedCommands:
-  - {fileID: 217425766}
+  selectedCommands: []
   variables:
   - {fileID: 217425758}
   description: 
@@ -5061,7 +5060,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   V: {fileID: 824520816}
-  curDis: 80
+  curDis: 0.6
+  V_Speed: 13
 --- !u!54 &824520818
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8684,6 +8684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   V: {fileID: 1267722621}
   curDis: 80
+  V_Speed: 0
 --- !u!1 &1271816376 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5137237753189749987, guid: 7b81f42762f8ae54e9871c5af4230ce9,

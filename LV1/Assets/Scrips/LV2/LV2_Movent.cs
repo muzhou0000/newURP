@@ -17,7 +17,7 @@ public class LV2_Movent : MonoBehaviour
     public float JumpPower;
     public float RunSpeed;
     public V_Follow V;
-    private float curDistance;
+    //private float curDistance;
     private bool P_Jump;
 
     //public GameObject Cam;
@@ -51,7 +51,7 @@ public class LV2_Movent : MonoBehaviour
     }
     private void Update()
     {
-        V.curDis = curDistance;
+        //V.curDis = curDistance;
         InputX = Input.GetAxis("Horizontal");
         //InputZ = Input.GetAxis("Vertical");
        
@@ -69,7 +69,7 @@ public class LV2_Movent : MonoBehaviour
             }
         }
 
-        V.Follow(transform.position,RunSpeed);
+       V.Follow(transform.position,10f);
     }
     void InputDecider()
     {
