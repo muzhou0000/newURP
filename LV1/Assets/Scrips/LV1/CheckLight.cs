@@ -18,6 +18,7 @@ public class CheckLight : MonoBehaviour
     public float xAix, yAix;
     public static int Xnum, Ynum;
     bool addx,addy;
+    AudioSource audioSource;
 
     void Start()
     {
@@ -30,6 +31,7 @@ public class CheckLight : MonoBehaviour
         check7.enabled = false;
         check8.enabled = false;
         check9.enabled = false;
+        audioSource.GetComponent<AudioSource>();
     }
 
     void Update()
@@ -48,6 +50,7 @@ public class CheckLight : MonoBehaviour
             Emeny.SetActive(false);
             //AB.SetActive(true);
             LightUI.SetActive(false);
+            audioSource.Play();
 
         }
         if (!Player.activeSelf) { 
@@ -123,6 +126,8 @@ public class CheckLight : MonoBehaviour
             check1.enabled = !check1.enabled;
             check4.enabled = !check4.enabled;
             check2.enabled = !check2.enabled;
+            audioSource.Play();
+            
         }
         if (Input.GetKeyDown(KeyCode.Keypad2) || (Xnum == 0 && Ynum == -1 && Input.GetButtonDown("XboxA")))
         {

@@ -36,6 +36,7 @@ public class AB12 : MonoBehaviour
     Color ColorUnUse = new Color(0.504717f, 1, 0.9374379f, 0.2901961f);
     Color ColorUsing = new Color(0.5058824f, 1, 0.5510341f, 0.2901961f);
     public Image ima1, ima2, ima3, ima4;
+    public AudioSource pass, miss;
 
 
 
@@ -66,7 +67,7 @@ public class AB12 : MonoBehaviour
             flow.SetBooleanVariable("對話中", false);
             Die_1.SetActive(true);
             Die_2.SetActive(true);
-
+            pass.Play();
             if (Input.anyKeyDown)
             {
                 ABend.SetActive(false);
@@ -80,7 +81,7 @@ public class AB12 : MonoBehaviour
             Cam.SetActive(false);
             GG.SetActive(true);
             Player.transform.position = deadPoint.transform.position;
-
+           
         }
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)||Input.GetButtonDown("XboxA")) 
         {
@@ -276,18 +277,22 @@ public class AB12 : MonoBehaviour
                 case 3:
                     check();
                     review4.text = (A + "A" + B + "B");
+                    miss.Play();
                     break;
                 case 2:
                     check();
                     review3.text = (A + "A" + B + "B");
+                    miss.Play();
                     break;
                 case 1:
                     check();
                     review2.text = (A + "A" + B + "B");
+                    miss.Play();
                     break;
                 case 0:
                     check();
                     review1.text = (A + "A" + B + "B");
+                    miss.Play();
                     break;
             }
             Count();
