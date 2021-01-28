@@ -8,14 +8,6 @@ public class V_Follow : MonoBehaviour
     public float curDis;
     public float V_Speed;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         curDis -= 0.1f;
@@ -44,13 +36,13 @@ public class V_Follow : MonoBehaviour
         if(other.gameObject.tag=="a")
         {
             V_Speed = 8;
+            ObjectBrock.soundEffect();
             Destroy(other.gameObject);
-
 
         }
         if (other.gameObject.tag=="Player")
         {
-            //SceneManager.LoadScene("LV2");
+            SceneManager.LoadScene("LV2");
         }
     }
 }
