@@ -1,14 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Fungus;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 
 public class V_Follow : MonoBehaviour
 {
     public Transform V;
     public float curDis;
     public float V_Speed;
+
 
     // Start is called before the first frame update
     void Start()
@@ -40,15 +39,16 @@ public class V_Follow : MonoBehaviour
     {
         V_Speed = 13;
     }
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter(UnityEngine.Collision other)
     {
         if(other.gameObject.tag=="a")
         {
             V_Speed = 8;
-           
             Destroy(other.gameObject);
+
+
         }
-        if(other.gameObject.tag=="Player")
+        if (other.gameObject.tag=="Player")
         {
             SceneManager.LoadScene("LV2");
         }
