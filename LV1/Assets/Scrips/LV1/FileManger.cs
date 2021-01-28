@@ -7,11 +7,13 @@ public class FileManger : MonoBehaviour
 {
     public GameObject File;
     public Animator OpenAni;
+    public AudioSource Open;
 
     private void Update()
     {
         if(Input.GetButtonDown("XboxLB")||Input.GetKeyDown(KeyCode.F))
         {
+            Open.Play();
             File.SetActive(true);
             OpenAni.SetBool("ani", true);
         }
