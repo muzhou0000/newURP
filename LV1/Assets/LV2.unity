@@ -918,7 +918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1479859127}
+  selectedFlowchart: {fileID: 569102261}
 --- !u!4 &117860003
 Transform:
   m_ObjectHideFlags: 1
@@ -3906,7 +3906,7 @@ GameObject:
   - component: {fileID: 535820438}
   m_Layer: 0
   m_Name: "\u843D\u77F3"
-  m_TagString: Rock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3981,7 +3981,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1322.55, y: 257.36752, z: 326.593}
   m_LocalScale: {x: 41.372753, y: 17.47, z: 2.2203}
-  m_Children: []
+  m_Children:
+  - {fileID: 1683916431}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4281,8 +4282,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 69
-    y: 73
+    x: 73
+    y: 71
     width: 74
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -4308,7 +4309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 0, y: 0}
+  scrollPos: {x: 141, y: 58}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -9355,7 +9356,6 @@ Transform:
   m_Children:
   - {fileID: 744968895}
   - {fileID: 569102262}
-  - {fileID: 1479859122}
   - {fileID: 1592555574}
   m_Father: {fileID: 0}
   m_RootOrder: 14
@@ -10865,7 +10865,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 465dbf8c1e9f61d46bb548d454c30a24, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.485
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -11135,160 +11135,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6216151830994215703, guid: 149c13d623dd08b4d954e6d6f0904aa0, type: 3}
---- !u!1 &1479859121
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1479859122}
-  - component: {fileID: 1479859127}
-  - component: {fileID: 1479859126}
-  - component: {fileID: 1479859125}
-  - component: {fileID: 1479859124}
-  - component: {fileID: 1479859123}
-  m_Layer: 0
-  m_Name: "\u969C\u7919\u7269\u6389\u4E0B\u4F86"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1479859122
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479859121}
-  m_LocalRotation: {x: 0.03764717, y: -0, z: -0, w: 0.9992911}
-  m_LocalPosition: {x: -13.134033, y: -36.482697, z: 30.270664}
-  m_LocalScale: {x: 1, y: 1, z: 14.729}
-  m_Children: []
-  m_Father: {fileID: 1309209313}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 4.315, y: 0, z: 0}
---- !u!114 &1479859123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479859121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc30c92f7ffe3d746ac76cd528d616e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 1
-  indentLevel: 0
-  control: 0
-  _audioSource:
-    audioSourceRef: {fileID: 0}
-    audioSourceVal: {fileID: 1463681507}
-  startVolume: 1
-  endVolume: 0.5
-  fadeDuration: 0
-  waitUntilFinished: 0
-  audioSourceOLD: {fileID: 0}
---- !u!65 &1479859124
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479859121}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 50, y: 6.935755, z: 1.6578283}
-  m_Center: {x: 0, y: 19.279766, z: 22.034859}
---- !u!114 &1479859125
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479859121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a98f5f89242e80d42865cdf1912beda3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentBlock: {fileID: 1479859126}
-  suppressBlockAutoSelect: 0
-  tagFilter:
-  - Rock
-  FireOn: 1
-  colliderVar: {fileID: 0}
---- !u!114 &1479859126
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479859121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 69
-    y: 73
-    width: 86
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 0
-  blockName: "\u969C\u7919\u7269"
-  description: 
-  eventHandler: {fileID: 1479859125}
-  commandList:
-  - {fileID: 1479859123}
-  suppressAllAutoSelections: 0
---- !u!114 &1479859127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479859121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  scrollPos: {x: 0, y: 0}
-  variablesScrollPos: {x: 0, y: 0}
-  variablesExpanded: 1
-  blockViewHeight: 400
-  zoom: 1
-  scrollViewRect:
-    serializedVersion: 2
-    x: -343
-    y: -340
-    width: 1114
-    height: 859
-  selectedBlocks:
-  - {fileID: 1479859126}
-  selectedCommands: []
-  variables: []
-  description: 
-  stepPause: 0
-  colorCommands: 1
-  hideComponents: 1
-  saveSelection: 1
-  localizationId: 
-  showLineNumbers: 0
-  hideCommands: []
-  luaEnvironment: {fileID: 0}
-  luaBindingName: flowchart
 --- !u!1 &1489996611
 GameObject:
   m_ObjectHideFlags: 0
@@ -12327,7 +12173,7 @@ Transform:
   - {fileID: 1389380334}
   - {fileID: 1463681506}
   m_Father: {fileID: 1309209313}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1596576778 stripped
 GameObject:
@@ -12819,6 +12665,160 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5830167227429627284, guid: 149c13d623dd08b4d954e6d6f0904aa0, type: 3}
+--- !u!1 &1683916430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1683916431}
+  - component: {fileID: 1683916436}
+  - component: {fileID: 1683916435}
+  - component: {fileID: 1683916434}
+  - component: {fileID: 1683916433}
+  - component: {fileID: 1683916432}
+  m_Layer: 0
+  m_Name: "\u8072\u97F3"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1683916431
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683916430}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.025, y: -0.91, z: 0.1}
+  m_LocalScale: {x: 0.024170496, y: 0.05724099, z: 0.4503896}
+  m_Children: []
+  m_Father: {fileID: 535820441}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1683916432
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683916430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc30c92f7ffe3d746ac76cd528d616e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1
+  indentLevel: 0
+  control: 0
+  _audioSource:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 1463681507}
+  startVolume: 1
+  endVolume: 1
+  fadeDuration: 1
+  waitUntilFinished: 0
+  audioSourceOLD: {fileID: 0}
+--- !u!65 &1683916433
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683916430}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 50, y: 50, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1683916434
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683916430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a98f5f89242e80d42865cdf1912beda3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 1683916435}
+  suppressBlockAutoSelect: 0
+  tagFilter:
+  - Player
+  FireOn: 1
+  colliderVar: {fileID: 0}
+--- !u!114 &1683916435
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683916430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 68
+    y: 70
+    width: 74
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 0
+  blockName: "\u969C\u7919\u7269\u8072\u97F3"
+  description: 
+  eventHandler: {fileID: 1683916434}
+  commandList:
+  - {fileID: 1683916432}
+  suppressAllAutoSelections: 0
+--- !u!114 &1683916436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683916430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  scrollPos: {x: 0, y: 0}
+  variablesScrollPos: {x: 0, y: 0}
+  variablesExpanded: 1
+  blockViewHeight: 400
+  zoom: 1
+  scrollViewRect:
+    serializedVersion: 2
+    x: -343
+    y: -340
+    width: 1114
+    height: 859
+  selectedBlocks:
+  - {fileID: 1683916435}
+  selectedCommands: []
+  variables: []
+  description: 
+  stepPause: 0
+  colorCommands: 1
+  hideComponents: 1
+  saveSelection: 1
+  localizationId: 
+  showLineNumbers: 0
+  hideCommands: []
+  luaEnvironment: {fileID: 0}
+  luaBindingName: flowchart
 --- !u!1 &1684304838 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9198531897541347679, guid: 7b81f42762f8ae54e9871c5af4230ce9,

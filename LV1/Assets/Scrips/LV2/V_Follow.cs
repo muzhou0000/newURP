@@ -50,7 +50,7 @@ public class V_Follow : MonoBehaviour
         }
         if (other.gameObject.tag=="Player")
         {
-            SceneManager.LoadScene("LV2");
+            //SceneManager.LoadScene("LV2");
         }
     }
 }
