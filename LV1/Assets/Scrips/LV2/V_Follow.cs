@@ -36,7 +36,6 @@ public class V_Follow : MonoBehaviour
         if(other.gameObject.tag=="a")
         {
             V_Speed = 8;
-            ObjectBrock.soundEffect();
             Destroy(other.gameObject);
 
         }
