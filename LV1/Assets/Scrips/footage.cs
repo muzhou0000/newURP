@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class footage : MonoBehaviour
 {
     [SerializeField]
-    AudioClip[] clips;
+    protected AudioClip[] clips;
     AudioSource audiosou;
 
     private void Awake()
@@ -15,12 +15,16 @@ public class footage : MonoBehaviour
     }
     void Step()
     {
-        Debug.Log("3");
-        AudioClip clip = GetRandomClip();
-        audiosou.PlayOneShot(clip);
+        int rand = Random.Range(0, clips.Length);
+        if (clips == null)
+        {
+            return;
+        }
+        audiosou.PlayOneShot(clips[rand]);
     }
-    AudioClip GetRandomClip()
-    {
-        return clips[UnityEngine.Random.Range(0, clips.Length)];
-    }
+    //AudioClip GetRandomClip()
+    //{
+
+    //    return clips[UnityEngine.Random.Range(0, clips.Length)];
+    //}
 }

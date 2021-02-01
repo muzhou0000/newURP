@@ -10,10 +10,6 @@ public class ObjectBrock : MonoBehaviour
     [SerializeField]
     protected AudioClip[] soundClip;
 
-    [Range(0, 1)]
-    [Tooltip("Volume level of the sound effect")]
-    [SerializeField]
-    protected float volume = 1;
 
     private void Start()
     {

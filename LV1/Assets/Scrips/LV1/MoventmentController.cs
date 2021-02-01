@@ -21,7 +21,6 @@ public class MoventmentController : MonoBehaviour
     public Flowchart Talk;
     //public GameObject Jump_Object;
     //public CinemachineFreeLook freeLook_cam;
-    public AudioSource AudioSou;
 
     [SerializeField] float rotationSpeed = 0.3f;
     [SerializeField] float allowRotation = 0.1f;
@@ -49,7 +48,6 @@ public class MoventmentController : MonoBehaviour
                 P_Jump = true;
                 ani.SetTrigger("跳");
                 ani.SetBool("Idle", false);
-            AudioSou.Play();
         }
         else
         {
@@ -58,7 +56,6 @@ public class MoventmentController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift)| Mathf.Round(Input.GetAxisRaw("XboxRT")) > 0)
         {
             P_Run = true;
-            AudioSou.Stop();
         }
         else
         {
