@@ -622,9 +622,10 @@ GameObject:
   - component: {fileID: 2080076303707302707}
   - component: {fileID: 1566031736705591744}
   - component: {fileID: 570031740979326676}
+  - component: {fileID: 5413628275819069571}
   - component: {fileID: 8069039430595499402}
   m_Layer: 8
-  m_Name: Ego (1)
+  m_Name: Ego(Prefab)
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -687,6 +688,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5413628275819069571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3064334200597944608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2a208b1a53e59f4faf87e449a174503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: a3314cfe4b912f34faa8956842469427, type: 3}
+  - {fileID: 8300000, guid: 3c8bb74ca94aa364fb28328e56454c6a, type: 3}
 --- !u!114 &8069039430595499402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -706,6 +722,7 @@ MonoBehaviour:
   RunSpeed: 250
   Cam: {fileID: 0}
   Talk: {fileID: 0}
+  AudioSou: {fileID: 0}
   rotationSpeed: 0.3
   allowRotation: 0.1
   movementSpeed: 150
