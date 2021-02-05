@@ -49,7 +49,7 @@ public class CheckLight : MonoBehaviour
             Cam_1.SetActive(true);
             Emeny.SetActive(false);
             //AB.SetActive(true);
-            LightUI.SetActive(false);   bb
+            LightUI.SetActive(false); 
         }
         if (!Player.activeSelf) { 
         LightCheck();
