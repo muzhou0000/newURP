@@ -9,6 +9,8 @@ public class ObjectBrock : MonoBehaviour
     [Tooltip("Sound effect clip to play")]
     [SerializeField]
     protected AudioClip[] soundClip;
+    [SerializeField]
+    protected AudioClip[] PoilClip;
 
 
     private void Start()
@@ -25,6 +27,15 @@ public class ObjectBrock : MonoBehaviour
             return;
             }
             audioSou.PlayOneShot(soundClip[rand]);
+        }
+        if (other.gameObject.tag == "b")
+        {
+            int rand_button = Random.Range(0, PoilClip.Length);
+            if (PoilClip == null)
+            {
+                return;
+            }
+            audioSou.PlayOneShot(PoilClip[rand_button]);
         }
     }
 

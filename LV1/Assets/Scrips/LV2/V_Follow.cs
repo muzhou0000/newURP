@@ -33,7 +33,7 @@ public class V_Follow : MonoBehaviour
     }
     private void OnCollisionEnter(UnityEngine.Collision other)
     {
-        if(other.gameObject.tag=="a")
+        if(other.gameObject.tag=="a"||other.gameObject.tag == "b")
         {
             V_Speed = 8;
             Destroy(other.gameObject);

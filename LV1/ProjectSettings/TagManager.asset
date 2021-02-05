@@ -9,6 +9,7 @@ TagManager:
   - Item
   - hand
   - Rock
+  - b
   layers:
   - Default
   - TransparentFX
