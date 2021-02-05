@@ -18,7 +18,7 @@ public class CheckLight : MonoBehaviour
     public float xAix, yAix;
     public static int Xnum, Ynum;
     bool addx,addy;
-    AudioSource audioSource;
+    public AudioSource audioSource;
 
     void Start()
     {
@@ -49,9 +49,7 @@ public class CheckLight : MonoBehaviour
             Cam_1.SetActive(true);
             Emeny.SetActive(false);
             //AB.SetActive(true);
-            LightUI.SetActive(false);
-            audioSource.Play();
-
+            LightUI.SetActive(false);   bb
         }
         if (!Player.activeSelf) { 
         LightCheck();
@@ -135,12 +133,16 @@ public class CheckLight : MonoBehaviour
             check2.enabled = !check2.enabled;
             check3.enabled = !check3.enabled;
             check5.enabled = !check5.enabled;
+            audioSource.Play();
+
         }
         if (Input.GetKeyDown(KeyCode.Keypad3) || (Xnum == 1 && Ynum == -1 && Input.GetButtonDown("XboxA")))
         {
             check3.enabled = !check3.enabled;
             check6.enabled = !check6.enabled;
             check2.enabled = !check2.enabled;
+            audioSource.Play();
+
         }
         if (Input.GetKeyDown(KeyCode.Keypad4) || (Xnum == -1 && Ynum == 0 && Input.GetButtonDown("XboxA")))
         {
@@ -148,6 +150,8 @@ public class CheckLight : MonoBehaviour
             check5.enabled = !check5.enabled;
             check1.enabled = !check1.enabled;
             check4.enabled = !check4.enabled;
+            audioSource.Play();
+
         }
         if (Input.GetKeyDown(KeyCode.Keypad5) || (Xnum == 0 && Ynum == 0 && Input.GetButtonDown("XboxA")))
         {
@@ -156,6 +160,8 @@ public class CheckLight : MonoBehaviour
             check8.enabled = !check8.enabled;
             check4.enabled = !check4.enabled;
             check2.enabled = !check2.enabled;
+            audioSource.Play();
+
 
         }
         if (Input.GetKeyDown(KeyCode.Keypad6) || (Xnum == 1 && Ynum == 0 && Input.GetButtonDown("XboxA")))
@@ -164,12 +170,16 @@ public class CheckLight : MonoBehaviour
             check3.enabled = !check3.enabled;
             check5.enabled = !check5.enabled;
             check9.enabled = !check9.enabled;
+            audioSource.Play();
+
         }
         if (Input.GetKeyDown(KeyCode.Keypad7) || (Xnum == -1 && Ynum == 1 && Input.GetButtonDown("XboxA")))
         {
             check7.enabled = !check7.enabled;
             check4.enabled = !check4.enabled;
             check8.enabled = !check8.enabled;
+            audioSource.Play();
+
         }
         if (Input.GetKeyDown(KeyCode.Keypad8) || (Xnum == 0 && Ynum == 1 && Input.GetButtonDown("XboxA")))
         {
@@ -177,12 +187,16 @@ public class CheckLight : MonoBehaviour
             check5.enabled = !check5.enabled;
             check7.enabled = !check7.enabled;
             check9.enabled = !check9.enabled;
+            audioSource.Play();
+
         }
         if (Input.GetKeyDown(KeyCode.Keypad9) || (Xnum == 1 && Ynum == 1 && Input.GetButtonDown("XboxA")))
         {
             check9.enabled = !check9.enabled;
             check6.enabled = !check6.enabled;
             check8.enabled = !check8.enabled;
+            audioSource.Play();
+
         }
     }
 }

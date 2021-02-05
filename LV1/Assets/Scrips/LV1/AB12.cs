@@ -36,7 +36,7 @@ public class AB12 : MonoBehaviour
     Color ColorUnUse = new Color(0.504717f, 1, 0.9374379f, 0.2901961f);
     Color ColorUsing = new Color(0.5058824f, 1, 0.5510341f, 0.2901961f);
     public Image ima1, ima2, ima3, ima4;
-    public AudioSource pass, miss;
+    public AudioSource pass, miss, chick;
 
 
 
@@ -146,6 +146,7 @@ public class AB12 : MonoBehaviour
         if (yAix > 0 && addy && Xnum == 0)
         {
             a++;
+            chick.Play();
             if (a > 9)
             {
                 a = 0;
@@ -159,6 +160,7 @@ public class AB12 : MonoBehaviour
         else if (yAix < 0 && addy && Xnum == 0)
         {
             a--;
+            chick.Play();
             if (a <= 0)
             {
                 a = 9;
@@ -173,6 +175,7 @@ public class AB12 : MonoBehaviour
         if (yAix > 0 && addy && Xnum == 1)
         {
             b++;
+            chick.Play();
             if (b > 9)
             {
                 b = 0;
@@ -186,6 +189,7 @@ public class AB12 : MonoBehaviour
         else if (yAix < 0 && addy && Xnum == 1)
         {
             b--;
+            chick.Play();
             if (b <= 0)
             {
                 b = 9;
@@ -199,6 +203,7 @@ public class AB12 : MonoBehaviour
         if (yAix > 0 && addy && Xnum == 2)
         {
             c++;
+            chick.Play();
             if (c > 9)
             {
                 c = 0;
@@ -212,6 +217,7 @@ public class AB12 : MonoBehaviour
         else if (yAix < 0 && addy && Xnum == 2)
         {
             c--;
+            chick.Play();
             if (c <= 0)
             {
                 c = 9;
@@ -225,6 +231,7 @@ public class AB12 : MonoBehaviour
         if (yAix > 0 && addy && Xnum == 3)
         {
             d++;
+            chick.Play();
             if (d > 9)
             {
                 d = 0;
@@ -237,6 +244,7 @@ public class AB12 : MonoBehaviour
         else if (yAix < 0 && addy && Xnum == 3)
         {
             d--;
+            chick.Play();
             if (d <= 0)
             {
                 d = 9;
