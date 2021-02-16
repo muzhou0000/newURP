@@ -32,15 +32,15 @@ MonoBehaviour:
   shape: 0
   border: 1
   verticalOffset: 0
-  distance: 50
-  distanceFallOff: 0.8
+  distance: 350
+  distanceFallOff: 0.902
   albedo: {r: 0.6784314, g: 0.6039216, b: 0.6039216, a: 1}
   brightness: 1
   deepObscurance: 1
   specularColor: {r: 1, g: 1, b: 0.8, a: 1}
   specularThreshold: 0.637
   specularIntensity: 0.428
-  turbulence: 0.5
+  turbulence: 0
   windDirection: {x: 0.005, y: 0.01, z: 0.01}
   lightDiffusionPower: 64
   lightDiffusionIntensity: 0
