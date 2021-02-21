@@ -9,50 +9,38 @@ public class GetFile : MonoBehaviour
 
     private void Update()
     {
-        if(RKey==true&&GetFile1==false)
+        if (RKey.activeSelf && !GetFile1)
         {
             if (Input.GetButtonDown("XboxA") || Input.GetKeyDown(KeyCode.R))
             {
+                Debug.Log("132");
                 GetFileTip.SetActive(true);
                 RKey.SetActive(false);
                 GetFile1 = true;
             }
         }
-        else if (GetFileTip == true && GetFile1 == true)
+        if (GetFileTip.activeSelf == true && GetFile1)
         {
-            if (Input.GetButtonDown("XboxA") || Input.GetKeyDown(KeyCode.R))
+            if (Input.GetButtonUp("XboxA") || Input.GetKeyDown(KeyCode.R))
             {
                 GetFileTip.SetActive(false);
                 Box.GetComponent<BoxCollider>().enabled = false;
             }
         }
-
-        //if (RKey.activeSelf && (Input.GetButtonDown("XboxA") || Input.GetKeyDown(KeyCode.R)))
-        //{
-        //    GetFileTip.SetActive(true);
-        //    RKey.SetActive(false);
-        //    GetFile1 = true;
-        //}
-        //else if (GetFileTip.activeSelf && (Input.GetButtonDown("XboxA") || Input.GetKeyDown(KeyCode.R)))
-        //{
-        //    GetFileTip.SetActive(false);
-        //    if (GetFile1)
-        //    {
-        //        Box.GetComponent<BoxCollider>().enabled = false;
-        //    }
-        //}
     }
     public void OnTriggerEnter(Collider other)
     {
-        RKey.SetActive(true);
+        if (other.tag == "Player") {
+            Debug.Log(123);
+            RKey.SetActive(true);
+        }
     }
 
     public void OnTriggerExit(Collider other)
     {
-        RKey.SetActive(false);
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        
+        if (other.tag == "Player") { 
+            RKey.SetActive(false);
+        }
+
     }
 }
