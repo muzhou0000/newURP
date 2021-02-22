@@ -24,7 +24,7 @@ public class InAndOut_Cam : MonoBehaviour
                 this.GetComponent<Renderer>().material.color.g,
                 this.GetComponent<Renderer>().material.color.b,
 
-                gameObject.GetComponent<Renderer>().material.color.a + tempTime/50);
+                gameObject.GetComponent<Renderer>().material.color.a + tempTime/20);
             }
         }
     }

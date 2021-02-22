@@ -5,7 +5,7 @@ using UnityEngine;
 public class GetFile : MonoBehaviour
 {
     public bool GetFile1;
-    public GameObject GetFileTip,RKey,Box;
+    public GameObject GetFileTip,RKey,Box,Door;
 
     private void Update()
     {
@@ -19,14 +19,16 @@ public class GetFile : MonoBehaviour
                 GetFile1 = true;
             }
         }
-        if (GetFileTip.activeSelf == true && GetFile1)
+        else if (GetFileTip.activeSelf == true && GetFile1)
         {
-            if (Input.GetButtonUp("XboxA") || Input.GetKeyDown(KeyCode.R))
+            if (Input.GetButtonDown("XboxA") || Input.GetKeyDown(KeyCode.R))
             {
                 GetFileTip.SetActive(false);
                 Box.GetComponent<BoxCollider>().enabled = false;
+                Door.GetComponent<BoxCollider>().enabled = true;
             }
         }
+
     }
     public void OnTriggerEnter(Collider other)
     {

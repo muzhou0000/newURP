@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: New Volumetric Fog Profile
   m_EditorClassIdentifier: 
   raymarchQuality: 1
-  raymarchMinStep: 100
+  raymarchMinStep: 120
   jittering: 0
   dithering: 1
   renderQueue: 3100
@@ -32,8 +32,8 @@ MonoBehaviour:
   shape: 0
   border: 1
   verticalOffset: 0
-  distance: 350
-  distanceFallOff: 0.902
+  distance: 300
+  distanceFallOff: 0.83
   albedo: {r: 0.6784314, g: 0.6039216, b: 0.6039216, a: 1}
   brightness: 1
   deepObscurance: 1
@@ -41,7 +41,7 @@ MonoBehaviour:
   specularThreshold: 0.637
   specularIntensity: 0.428
   turbulence: 0
-  windDirection: {x: 0.005, y: 0.01, z: 0.01}
+  windDirection: {x: 0.005, y: 0, z: 0}
   lightDiffusionPower: 64
   lightDiffusionIntensity: 0
   receiveShadows: 0
