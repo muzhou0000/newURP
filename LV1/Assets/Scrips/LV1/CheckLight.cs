@@ -15,9 +15,9 @@ public class CheckLight : MonoBehaviour
     public GameObject Flash;
     public GameObject Cam_1;
     public GameObject Emeny;
-    public float xAix, yAix;
+    public static float xAix, yAix;
     public static int Xnum, Ynum;
-    bool addx,addy;
+    public static bool addx,addy;
     public AudioSource audioSource;
 
     void Start()
@@ -68,7 +68,7 @@ public class CheckLight : MonoBehaviour
             check9.enabled = false;
         }
     }
-    void intnum()
+    public static void intnum()
     {
 
         if (xAix > 0 && addx)

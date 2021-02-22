@@ -33,7 +33,6 @@ public class GetFile : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player") {
-            Debug.Log(123);
             RKey.SetActive(true);
         }
     }
