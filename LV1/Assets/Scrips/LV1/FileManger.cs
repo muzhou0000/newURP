@@ -8,44 +8,55 @@ public class FileManger : MonoBehaviour
     public GameObject File,TxT_File;
     public Animator OpenAni;
     public AudioSource Open;
-    bool A;
-    int B;
+    int B, C;
 
     private void Update()
     {
-        if(Input.GetButtonDown("XboxLB") &&!A || Input.GetKeyDown(KeyCode.F)&&!A)
+        count();
+        if (Input.GetButtonDown("XboxLB") &&B==1 || Input.GetKeyDown(KeyCode.F)&& B == 1)
         {
             Open.Play();
             File.SetActive(true);
             OpenAni.SetBool("ani", true);
-            OpenFile();
             CheckLight.intnum();
-            A = true;
         }
-        // if (A&&Input.GetButtonUp("XboxLB") ||A&&Input.GetKeyDown(KeyCode.Escape)){
-        //    File.SetActive(false);
-        //    OpenAni.SetBool("ani", false);
-        //    A = false;
-        //    Debug.Log(A);
-        //}
-        if (Input.GetButtonDown("XboxA") && File.activeSelf&&B==0)
+        if (B>1 && Input.GetButtonUp("XboxLB") || B > 1 && Input.GetKeyDown(KeyCode.Escape))
         {
-            TxT_File.SetActive(true);
-            B += 1;
-            if (Input.GetButtonDown("XboxA") && TxT_File.activeSelf&&B>=1)
+            File.SetActive(false);
+            OpenAni.SetBool("ani", false);
+            if (B > 1)
             {
-
-                TxT_File.SetActive(false);
+                B = 0;
             }
         }
-    }
-    void OpenFile()
-    {
-        print("2");
-
-        if (Input.GetButtonUp("XboxA")&& TxT_File.activeSelf)
-        {
+        if (Input.GetButtonDown("XboxA") && File.activeSelf&&C==1)
+        {  
+            TxT_File.SetActive(true);
+            
         }
-        
+        if (Input.GetButtonDown("XboxA") && TxT_File.activeSelf && C > 1 || !File.activeSelf)
+        {
+            TxT_File.SetActive(false);
+            if (C > 1)
+            {
+                C = 0;
+            }
+
+        }
+    }
+void count()
+    {
+        if (Input.GetButtonDown("XboxLB"))
+        {
+            B += 1;
+        }
+        if (Input.GetButtonDown("XboxA"))
+        {
+            C += 1;
+        }
+        if (B ==0)
+        {
+            C = 0;
+        }
     }
 }

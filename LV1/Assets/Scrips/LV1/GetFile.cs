@@ -13,7 +13,6 @@ public class GetFile : MonoBehaviour
         {
             if (Input.GetButtonDown("XboxA") || Input.GetKeyDown(KeyCode.R))
             {
-                Debug.Log("132");
                 GetFileTip.SetActive(true);
                 RKey.SetActive(false);
                 GetFile1 = true;
