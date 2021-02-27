@@ -144,6 +144,7 @@ public class MoventmentController : MonoBehaviour
     {
         if(Talk.GetBooleanVariable("對話中") ==false)
         {
+
             MovementManager();
             InputDecider();
             Jump();
