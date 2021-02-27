@@ -18,7 +18,7 @@ public class FileManger : MonoBehaviour
             Open.Play();
             File.SetActive(true);
             OpenAni.SetBool("ani", true);
-            CheckLight.intnum();
+            CheckLight.intnum();//還沒用
         }
         if (B>1 && Input.GetButtonUp("XboxLB") || B > 1 && Input.GetKeyDown(KeyCode.Escape))
         {

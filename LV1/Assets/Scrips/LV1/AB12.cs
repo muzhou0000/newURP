@@ -68,12 +68,11 @@ public class AB12 : MonoBehaviour
             Die_1.SetActive(true);
             Die_2.SetActive(true);
             pass.Play();
-            if (Input.anyKeyDown)
-            {
-                ABend.SetActive(false);
-                main_AB.SetActive(false);
-                times += 5;
-            }
+            Invoke("close", 1.5f);
+            //if (Input.anyKeyDown)
+            //{
+
+            //}
         }
         if (times > 5 && A < 4)
         {
@@ -335,6 +334,13 @@ public class AB12 : MonoBehaviour
                 }
             }
         }
+    }
+
+    void close()
+    {
+        main_AB.SetActive(false);
+        ABend.SetActive(false);
+        times += 5;
     }
 }
 
