@@ -148,6 +148,17 @@ MonoBehaviour:
         m_PreInfinity: 0
         m_PostInfinity: 0
         m_RotationOrder: 0
+  - m_From: "\u5009\u5EAB\u651D\u5F71\u6A5F"
+    m_To: "\u7B2C\u4E09\u4EBA\u7A31\u651D\u6A5F"
+    m_Blend:
+      m_Style: 0
+      m_Time: 2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
   - m_From: "\u8DDF\u96A8\u5009\u5EAB\u6575\u4EBA\u651D\u5F71\u6A5F "
     m_To: "\u7B2C\u4E09\u4EBA\u7A31\u651D\u6A5F"
     m_Blend:
@@ -170,8 +181,41 @@ MonoBehaviour:
         m_PreInfinity: 0
         m_PostInfinity: 0
         m_RotationOrder: 0
-  - m_From: "\u5009\u5EAB\u524D\u7A7A\u62CD\u6A5F"
+  - m_From: "\u5009\u5EAB\u5167\u93E1\u982D"
     m_To: CM vcam1
+    m_Blend:
+      m_Style: 0
+      m_Time: 2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: "\u5009\u5EAB\u5167\u93E1\u982D"
+    m_To: "\u7B2C\u4E09\u4EBA\u7A31\u651D\u6A5F"
+    m_Blend:
+      m_Style: 0
+      m_Time: 2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: "\u7B2C\u4E09\u4EBA\u7A31\u651D\u6A5F"
+    m_To: "\u5009\u5EAB\u524D\u7A7A\u62CD\u6A5F"
+    m_Blend:
+      m_Style: 0
+      m_Time: 2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: "\u5009\u5EAB\u524D\u7A7A\u62CD\u6A5F"
+    m_To: "\u5009\u5EAB\u5167\u93E1\u982D"
     m_Blend:
       m_Style: 0
       m_Time: 2
