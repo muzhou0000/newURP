@@ -10,6 +10,7 @@ TagManager:
   - hand
   - Rock
   - b
+  - Bernard
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - NO_CAM
   - NO_Light
   - Cam
-  - 
+  - Bernard
   - 
   - 
   - 
