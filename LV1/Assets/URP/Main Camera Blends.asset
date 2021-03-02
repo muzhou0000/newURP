@@ -203,7 +203,7 @@ MonoBehaviour:
         m_PreInfinity: 0
         m_PostInfinity: 0
         m_RotationOrder: 0
-  - m_From: "\u7B2C\u4E09\u4EBA\u7A31\u651D\u6A5F"
+  - m_From: "\u5009\u5EAB\u683C\u7D0D"
     m_To: "\u5009\u5EAB\u524D\u7A7A\u62CD\u6A5F"
     m_Blend:
       m_Style: 0
@@ -219,6 +219,17 @@ MonoBehaviour:
     m_Blend:
       m_Style: 0
       m_Time: 2
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: "\u8857\u666F\u651D\u5F71\u6A5F"
+    m_To: "\u8857\u666F\u651D\u5F71\u6A5F -1"
+    m_Blend:
+      m_Style: 1
+      m_Time: 1
       m_CustomCurve:
         serializedVersion: 2
         m_Curve: []
