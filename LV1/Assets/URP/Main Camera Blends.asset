@@ -236,3 +236,25 @@ MonoBehaviour:
         m_PreInfinity: 0
         m_PostInfinity: 0
         m_RotationOrder: 0
+  - m_From: "\u8857\u666F\u651D\u5F71\u6A5F -1"
+    m_To: "\u8857\u666F\u651D\u5F71\u6A5F -1 (1)"
+    m_Blend:
+      m_Style: 1
+      m_Time: 1
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: "\u8857\u666F\u651D\u5F71\u6A5F -1 (1)"
+    m_To: "\u8857\u666F\u651D\u5F71\u6A5F -1 (2)"
+    m_Blend:
+      m_Style: 1
+      m_Time: 1
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
