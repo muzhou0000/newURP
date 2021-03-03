@@ -22,8 +22,8 @@ public class FileManger : MonoBehaviour
         }
         if (B>1 && Input.GetButtonUp("XboxLB") || B > 1 && Input.GetKeyDown(KeyCode.Escape))
         {
-            File.SetActive(false);
             OpenAni.SetBool("ani", false);
+            Invoke("close", 0.2f);
             if (B > 1)
             {
                 B = 0;
@@ -44,7 +44,7 @@ public class FileManger : MonoBehaviour
 
         }
     }
-void count()
+    void count()
     {
         if (Input.GetButtonDown("XboxLB"))
         {
@@ -58,5 +58,9 @@ void count()
         {
             C = 0;
         }
+    }
+    void close()
+    {
+        File.SetActive(false);
     }
 }
