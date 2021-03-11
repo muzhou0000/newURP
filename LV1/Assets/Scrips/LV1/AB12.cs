@@ -55,7 +55,7 @@ public class AB12 : MonoBehaviour
     private void Update()
     {
         xAix = Input.GetAxisRaw("XboxRL");
-        yAix = Input.GetAxisRaw("Vertical");
+        yAix = Input.GetAxisRaw("XboxUD");
         MoveAndAdd();
 
         if (times <= 5 && A == 4)
