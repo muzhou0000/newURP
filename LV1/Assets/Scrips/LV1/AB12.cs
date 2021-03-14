@@ -21,7 +21,7 @@ public class AB12 : MonoBehaviour
     bool[] flag = new bool[4];
 
     public int times = 0;
-    public GameObject AB,main_AB;
+    public GameObject AB,main_AB,fungus_AB;
     public GameObject GG;
     public GameObject Cam,Player,deadPoint;
     public GameObject ABend;
@@ -74,13 +74,16 @@ public class AB12 : MonoBehaviour
 
             //}
         }
-        if (times > 5 && A < 4)
+        if (times > 6 && A < 4)
         {
-            AB.SetActive(false);
             Cam.SetActive(false);
             GG.SetActive(true);
-            Player.transform.position = deadPoint.transform.position;
-           
+            //Player.transform.position = deadPoint.transform.position;
+            main_AB.SetActive(false);
+            //fungus_AB.SetActive(false);
+            flow.SetBooleanVariable("對話中", false);
+
+
         }
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)||Input.GetButtonDown("XboxA")) 
         {
