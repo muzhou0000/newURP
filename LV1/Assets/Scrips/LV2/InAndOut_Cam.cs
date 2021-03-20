@@ -12,7 +12,7 @@ public class InAndOut_Cam : MonoBehaviour
         //OnBecameInvisible();
         if (isInView)
         {
-            Debug.Log(this.name.ToString() + "這個物體出現在螢幕裡面了");
+            //Debug.Log(this.name.ToString() + "這個物體出現在螢幕裡面了");
             if (tempTime < 1)
             {
                 tempTime = tempTime + Time.deltaTime;

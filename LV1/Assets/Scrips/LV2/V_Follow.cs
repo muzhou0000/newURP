@@ -36,8 +36,7 @@ public class V_Follow : MonoBehaviour
         if(other.gameObject.tag=="a"||other.gameObject.tag == "b")
         {
             V_Speed = 8;
-            Destroy(other.gameObject);
-
+            //Destroy(other.gameObject);
         }
         if (other.gameObject.tag=="Player")
         {
