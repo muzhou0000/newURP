@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 10210785}
   - component: {fileID: 10210784}
   - component: {fileID: 10210783}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: ir1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +313,6 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 32120c2a2fb263d488faab2251e079ff, type: 2}
   - {fileID: 2100000, guid: 7b7bd483de8349c4db58797ccb0d08d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -721,7 +720,7 @@ GameObject:
   m_Component:
   - component: {fileID: 52971729}
   - component: {fileID: 52971728}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: ir(Break)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2823,7 +2822,7 @@ GameObject:
   - component: {fileID: 233134006}
   - component: {fileID: 233134005}
   - component: {fileID: 233134004}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: '@ir1(Break) (single mesh)'
   m_TagString: a
   m_Icon: {fileID: 0}
@@ -2848,7 +2847,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 32120c2a2fb263d488faab2251e079ff, type: 2}
+  - {fileID: 2100000, guid: 7b7bd483de8349c4db58797ccb0d08d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3364,7 +3363,7 @@ GameObject:
   - component: {fileID: 340461019}
   - component: {fileID: 340461018}
   - component: {fileID: 340461017}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: ir2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3452,7 +3451,6 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 32120c2a2fb263d488faab2251e079ff, type: 2}
   - {fileID: 2100000, guid: 7b7bd483de8349c4db58797ccb0d08d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -6787,13 +6785,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 824520812}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 1e+9
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 114
   m_CollisionDetection: 0
 --- !u!95 &824520819
 Animator:
@@ -8390,7 +8388,7 @@ GameObject:
   - component: {fileID: 921669509}
   - component: {fileID: 921669508}
   - component: {fileID: 921669507}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: ir12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8476,7 +8474,6 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 32120c2a2fb263d488faab2251e079ff, type: 2}
   - {fileID: 2100000, guid: 7b7bd483de8349c4db58797ccb0d08d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -11740,7 +11737,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1304410217}
   m_Layer: 15
-  m_Name: GameObject
+  m_Name: "\u7834\u58DE\u7269\u4EF6"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15945,7 +15942,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1650266657}
   - component: {fileID: 1650266656}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: ir1(Break)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17653,7 +17650,7 @@ GameObject:
   - component: {fileID: 1780507814}
   - component: {fileID: 1780507813}
   - component: {fileID: 1780507812}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: ir11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17739,7 +17736,6 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 32120c2a2fb263d488faab2251e079ff, type: 2}
   - {fileID: 2100000, guid: 7b7bd483de8349c4db58797ccb0d08d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -17857,7 +17853,7 @@ GameObject:
   - component: {fileID: 1794458285}
   - component: {fileID: 1794458284}
   - component: {fileID: 1794458283}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: ir3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17926,7 +17922,6 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 32120c2a2fb263d488faab2251e079ff, type: 2}
   - {fileID: 2100000, guid: 7b7bd483de8349c4db58797ccb0d08d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -20575,7 +20570,7 @@ GameObject:
   - component: {fileID: 1957461019}
   - component: {fileID: 1957461021}
   - component: {fileID: 1957461020}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: '@ir(Break) (single mesh)'
   m_TagString: a
   m_Icon: {fileID: 0}
@@ -20614,7 +20609,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 32120c2a2fb263d488faab2251e079ff, type: 2}
+  - {fileID: 2100000, guid: 7b7bd483de8349c4db58797ccb0d08d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21472,7 +21467,7 @@ GameObject:
   - component: {fileID: 2103542061}
   - component: {fileID: 2103542060}
   - component: {fileID: 2103542059}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: ir13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21560,7 +21555,6 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 32120c2a2fb263d488faab2251e079ff, type: 2}
   - {fileID: 2100000, guid: 7b7bd483de8349c4db58797ccb0d08d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0

@@ -22,6 +22,7 @@ public class Break : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             BreakObject.SetActive(true);
+            //BreakObject.layer = LayerMask.NameToLayer("NO_Collider");
             Destroy(gameObject);
         }
     }
