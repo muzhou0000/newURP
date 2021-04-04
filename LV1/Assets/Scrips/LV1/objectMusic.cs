@@ -5,12 +5,12 @@ using UnityEngine;
 public class objectMusic : MonoBehaviour
 {
     AudioSource audioSou;
-    //public AudioClip brock;
     [Tooltip("Sound effect clip to play")]
     [SerializeField]
     protected AudioClip[] soundClip;
     [SerializeField]
     protected AudioClip[] PoilClip;
+    public static bool A;
 
 
     private void Start()
@@ -28,6 +28,8 @@ public class objectMusic : MonoBehaviour
                 return;
             }
             audioSou.PlayOneShot(soundClip[rand]);
+            call();
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "b")
         {
@@ -39,6 +41,9 @@ public class objectMusic : MonoBehaviour
             audioSou.PlayOneShot(PoilClip[rand_button]);
         }
     }
-
+    public static void call()
+    {
+        A = true;
+    }
 
 }

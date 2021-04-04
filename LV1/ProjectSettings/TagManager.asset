@@ -11,6 +11,7 @@ TagManager:
   - Rock
   - b
   - Bernard
+  - Materials
   layers:
   - Default
   - TransparentFX
