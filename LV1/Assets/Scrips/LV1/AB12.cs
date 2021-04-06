@@ -22,7 +22,7 @@ public class AB12 : MonoBehaviour
 
     public int times = 0;
     public GameObject AB,main_AB,fungus_AB;
-    public GameObject GG;
+    public GameObject dead;
     public GameObject Cam,Player,deadPoint;
     public GameObject ABend;
     public GameObject Die;
@@ -77,7 +77,7 @@ public class AB12 : MonoBehaviour
         if (times > 6 && A < 4)
         {
             Cam.SetActive(false);
-            GG.SetActive(true);
+            dead.SetActive(true);
             //Player.transform.position = deadPoint.transform.position;
             main_AB.SetActive(false);
             //fungus_AB.SetActive(false);

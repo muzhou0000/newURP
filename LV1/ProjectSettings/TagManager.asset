@@ -13,6 +13,7 @@ TagManager:
   - Bernard
   - Materials
   - bucket
+  - Text
   layers:
   - Default
   - TransparentFX

@@ -5,6 +5,7 @@ using UnityEngine;
 public class objectMusic : MonoBehaviour
 {
     AudioSource audioSou;
+    public GameObject glassTip;
     [Tooltip("Sound effect clip to play")]
     [SerializeField]
     protected AudioClip[] soundClip;
@@ -16,6 +17,13 @@ public class objectMusic : MonoBehaviour
     private void Start()
     {
         audioSou = GetComponent<AudioSource>();
+    }
+    private void Update()
+    {
+        if (Input.GetButton("XboxA"))
+        {
+            glassTip.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -42,6 +50,19 @@ public class objectMusic : MonoBehaviour
             }
             audioSou.PlayOneShot(PoilClip[rand_button]);
             call();
+            Destroy(other.gameObject);
+        }
+        if (other.gameObject.tag == "Text")
+        {
+            glassTip.SetActive(true);
+            
+            audioSou.volume = 0.05f;
+            int rand = Random.Range(0, soundClip.Length);
+            if (soundClip == null)
+            {
+                return;
+            }
+            audioSou.PlayOneShot(soundClip[rand]);
             Destroy(other.gameObject);
         }
     }

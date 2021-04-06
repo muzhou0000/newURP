@@ -8,7 +8,7 @@ public class countdown : MonoBehaviour
 {
     float time_int = 30f;
     public Text timeUI;
-    public GameObject GG;
+    public GameObject dead;
     public GameObject time_active;
     public Flowchart opendoor;
     string MyFloatName = "RE";
@@ -21,8 +21,8 @@ public class countdown : MonoBehaviour
         timeUI.text = time_int + "秒";
         if (time_int <= 0)
         {
+            dead.SetActive(true);
             CancelInvoke("timecount");
-            GG.SetActive(true);
             time_active.SetActive(false);
         }
     }
