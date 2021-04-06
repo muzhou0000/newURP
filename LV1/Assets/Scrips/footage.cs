@@ -15,6 +15,7 @@ public class footage : MonoBehaviour
     }
     void Step()
     {
+        audiosou.volume = 0.152f;
         int rand = Random.Range(0, clips.Length);
         if (clips == null)
         {

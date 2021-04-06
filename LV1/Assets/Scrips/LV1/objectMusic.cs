@@ -22,6 +22,7 @@ public class objectMusic : MonoBehaviour
     {
         if (other.gameObject.tag == "Materials")
         {
+            audioSou.volume = 0.05f;
             int rand = Random.Range(0, soundClip.Length);
             if (soundClip == null)
             {
@@ -31,14 +32,17 @@ public class objectMusic : MonoBehaviour
             call();
             Destroy(other.gameObject);
         }
-        if (other.gameObject.tag == "b")
+        if (other.gameObject.tag == "bucket")
         {
+            audioSou.volume = 0.05f;
             int rand_button = Random.Range(0, PoilClip.Length);
             if (PoilClip == null)
             {
                 return;
             }
             audioSou.PlayOneShot(PoilClip[rand_button]);
+            call();
+            Destroy(other.gameObject);
         }
     }
     public static void call()

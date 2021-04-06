@@ -8,10 +8,18 @@ public class enemy : MonoBehaviour
     protected GameObject[] Material;
     public Transform target;
 
-    void Update()
+    //void Update()
+    //{
+    //    if(!Material[0]&&objectMusic.A)
+    //    GetComponent<Transform>().LookAt(target);
+    //}
+    private void OnTriggerEnter(Collider other)
     {
-        if(!Material[0]&&objectMusic.A)
+        if (other.gameObject.tag == "Player" && objectMusic.A)
+        {
         GetComponent<Transform>().LookAt(target);
+            objectMusic.A = false;
+        }
     }
-    
+
 }

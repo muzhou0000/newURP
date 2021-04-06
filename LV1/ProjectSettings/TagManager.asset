@@ -12,6 +12,7 @@ TagManager:
   - b
   - Bernard
   - Materials
+  - bucket
   layers:
   - Default
   - TransparentFX

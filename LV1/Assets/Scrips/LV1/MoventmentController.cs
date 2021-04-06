@@ -42,14 +42,18 @@ public class MoventmentController : MonoBehaviour
         InputX = Input.GetAxis("Horizontal");
         InputZ = Input.GetAxis("Vertical");
 
-        if (characterController.isGrounded&&gravity==0&& Input.GetKeyDown(KeyCode.Space)
-            ||characterController.isGrounded && gravity == 0 && Input.GetButtonDown("XboxB"))
-        {
-                P_Jump = true;
-                ani.SetTrigger("跳");
-                ani.SetBool("Idle", false);
-        }
-        else
+        //if (characterController.isGrounded&&gravity==0&& Input.GetKeyDown(KeyCode.Space)
+        //    ||characterController.isGrounded && gravity == 0 && Input.GetButtonDown("XboxB"))
+        //{
+        //        P_Jump = true;
+        //        ani.SetTrigger("跳");
+        //        ani.SetBool("Idle", false);
+        //}
+        //else
+        //{
+        //    ani.SetBool("Idle", true);
+        //}
+        if (!ani.GetBool("走路"))
         {
             ani.SetBool("Idle", true);
         }
@@ -130,16 +134,16 @@ public class MoventmentController : MonoBehaviour
             gravity = 0;
         }
     }
-    void Jump()
-    {
-        if (P_Jump)
-        {
-            gravity += (JumpPower * Time.fixedDeltaTime) * 0.08f;
-            P_Jump = false;
-        }
+    //void Jump()
+    //{
+    //    if (P_Jump)
+    //    {
+    //        gravity += (JumpPower * Time.fixedDeltaTime) * 0.08f;
+    //        P_Jump = false;
+    //    }
 
 
-    }
+    //}
     void  MovementController()
     {
         if(Talk.GetBooleanVariable("對話中") ==false)
@@ -147,7 +151,7 @@ public class MoventmentController : MonoBehaviour
 
             MovementManager();
             InputDecider();
-            Jump();
+            //Jump();
             Cam.GetComponent<CinemachineFreeLook>().m_XAxis.m_MaxSpeed = 3000;
             Cam.GetComponent<CinemachineFreeLook>().m_YAxis.m_MaxSpeed = 25;
         }
