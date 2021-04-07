@@ -18,7 +18,7 @@ public class V_Follow : MonoBehaviour
         }
         if (V_Speed == 2)
         {
-            Invoke("resert", 1);
+            Invoke("resert", 0.8f);
         }
     }
     public void Follow(Vector3 pos,float speed)
@@ -41,6 +41,10 @@ public class V_Follow : MonoBehaviour
         if (other.gameObject.tag=="Player")
         {
             SceneManager.LoadScene("LV2");
+        }
+        if(other.gameObject.tag=="b")
+        {
+            Destroy(other.gameObject);
         }
     }
 }
