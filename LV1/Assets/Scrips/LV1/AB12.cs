@@ -42,10 +42,10 @@ public class AB12 : MonoBehaviour
 
     private void Start()
     {
-        randomArray[0] = 1;
-        randomArray[1] = 2;
+        randomArray[0] = 4;
+        randomArray[1] = 6;
         randomArray[2] = 3;
-        randomArray[3] = 4;
+        randomArray[3] = 7;
     }
 
     public void Count()
@@ -58,7 +58,7 @@ public class AB12 : MonoBehaviour
         yAix = Input.GetAxisRaw("XboxUD");
         MoveAndAdd();
 
-        if (times <= 5 && A == 4)
+        if ( A == 4)
         {
             AB.SetActive(false);
             Cam.SetActive(false);
@@ -70,21 +70,18 @@ public class AB12 : MonoBehaviour
             pass.Play();
             Invoke("close", 1.5f);
             //if (Input.anyKeyDown)
-            //{
-
-            //}
         }
-        if (times > 6 && A < 4)
-        {
-            Cam.SetActive(false);
-            dead.SetActive(true);
-            //Player.transform.position = deadPoint.transform.position;
-            main_AB.SetActive(false);
-            //fungus_AB.SetActive(false);
-            flow.SetBooleanVariable("對話中", false);
+        //if (times > 6 && A < 4)
+        //{
+        //    Cam.SetActive(false);
+        //    dead.SetActive(true);
+        //    //Player.transform.position = deadPoint.transform.position;
+        //    main_AB.SetActive(false);
+        //    //fungus_AB.SetActive(false);
+        //    flow.SetBooleanVariable("對話中", false);
 
 
-        }
+        //}
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)||Input.GetButtonDown("XboxA")) 
         {
             EnterAnswer();
@@ -256,25 +253,26 @@ public class AB12 : MonoBehaviour
 
         }
     }
+
     public void EnterAnswer()
     {
         if (preventError == 0)
         {
-            switch (times)
-            { 
-                case 3:
-                    four.text = "" + a + "" + b + "" + c + "" + d;
-                    break;
-                case 2:
-                    third.text = "" + a + "" + b + "" + c + "" + d;
-                    break;
-                case 1:
-                    second.text = "" + a + "" + b + "" + c + "" + d;
-                    break;
-                case 0:
+            //switch (times)
+            //{ 
+            //    case 3:
+            //        four.text = "" + a + "" + b + "" + c + "" + d;
+            //        break;
+            //    case 2:
+            //        third.text = "" + a + "" + b + "" + c + "" + d;
+            //        break;
+            //    case 1:
+            //        second.text = "" + a + "" + b + "" + c + "" + d;
+            //        break;
+            //    case 0:
                     first.text = "" + a + "" + b + "" + c + "" + d;
-                    break;
-            }
+            //        break;
+            //}
         }
     }
 
@@ -282,29 +280,28 @@ public class AB12 : MonoBehaviour
     {
         if (preventError == 0)
         {
-            switch (times)
-            {
-                case 3:
-                    check();
-                    review4.text = (A + "A" + B + "B");
-                    miss.Play();
-                    break;
-                case 2:
-                    check();
-                    review3.text = (A + "A" + B + "B");
-                    miss.Play();
-                    break;
-                case 1:
-                    check();
-                    review2.text = (A + "A" + B + "B");
-                    miss.Play();
-                    break;
-                case 0:
+            //switch (times)
+            //{
+            //    case 3:
+            //        check();
+            //        review4.text = (A + "A" + B + "B");
+            //        miss.Play();
+            //        break;
+            //    case 2:
+            //        check();
+            //        review3.text = (A + "A" + B + "B");
+            //        miss.Play();
+            //        break;
+            //    case 1:
+            //        check();
+            //        review2.text = (A + "A" + B + "B");
+            //        miss.Play();
+            //        break;
+            //    case 0:
                     check();
                     review1.text = (A + "A" + B + "B");
                     miss.Play();
-                    break;
-            }
+  
             Count();
         }
     }
@@ -343,7 +340,7 @@ public class AB12 : MonoBehaviour
     {
         main_AB.SetActive(false);
         ABend.SetActive(false);
-        times += 5;
+        //times += 5;
     }
 }
 
