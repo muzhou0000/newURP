@@ -625,7 +625,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1797108478}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1797108486}
   variables: []
   description: 
   stepPause: 0
@@ -670,9 +671,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 45.195114
-    y: 56.048767
-    width: 80.4878
+    x: 42.75609
+    y: 57.26828
+    width: 79.26829
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -834,7 +835,7 @@ MonoBehaviour:
   itemId: 8
   indentLevel: 0
   duration: 1
-  targetAlpha: 1
+  targetAlpha: 0
   waitUntilFinished: 1
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   fadeTexture: {fileID: 0}
