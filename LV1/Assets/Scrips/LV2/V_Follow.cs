@@ -16,7 +16,7 @@ public class V_Follow : MonoBehaviour
             curDis = -10;
             curDis += 0.1f;
         }
-        if (V_Speed == 8)
+        if (V_Speed == 2)
         {
             Invoke("resert", 1);
         }
@@ -35,7 +35,7 @@ public class V_Follow : MonoBehaviour
     {
         if(other.gameObject.tag=="a"||other.gameObject.tag == "b")
         {
-            V_Speed = 8;
+            V_Speed = 2;
             //Destroy(other.gameObject);
         }
         if (other.gameObject.tag=="Player")

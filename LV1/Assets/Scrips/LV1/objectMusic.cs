@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Fungus;
 using UnityEngine;
 
 public class objectMusic : MonoBehaviour
@@ -12,10 +13,13 @@ public class objectMusic : MonoBehaviour
     [SerializeField]
     protected AudioClip[] PoilClip;
     public static bool A;
+    public  GameObject high_Camera1,EGO;
+    public Flowchart talk;
 
 
     private void Start()
     {
+        A = true;
         audioSou = GetComponent<AudioSource>();
     }
     private void Update()
@@ -37,8 +41,10 @@ public class objectMusic : MonoBehaviour
                 return;
             }
             audioSou.PlayOneShot(soundClip[rand]);
-            call();
+            high_Camera1.SetActive(true);
+            EGO.GetComponent<MoventmentController>().enabled = false;
             Destroy(other.gameObject);
+            call();
         }
         if (other.gameObject.tag == "bucket")
         {
@@ -50,7 +56,6 @@ public class objectMusic : MonoBehaviour
             }
             audioSou.PlayOneShot(PoilClip[rand_button]);
             call();
-            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "Text")
         {
@@ -66,9 +71,10 @@ public class objectMusic : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
-    public static void call()
+    public  void call()
     {
-        A = true;
+        A = false;
+        Debug.Log("123");
     }
 
 }
