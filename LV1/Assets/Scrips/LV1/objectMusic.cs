@@ -13,8 +13,10 @@ public class objectMusic : MonoBehaviour
     [SerializeField]
     protected AudioClip[] PoilClip;
     public static bool A;
-    public  GameObject high_Camera1,EGO;
+    public GameObject EGO, high_Camera1, high_Camera2, high_Camera3;
     public Flowchart talk;
+    public GameObject dead;
+    public Vector3 roof_dead;
 
 
     private void Start()
@@ -29,7 +31,6 @@ public class objectMusic : MonoBehaviour
             glassTip.SetActive(false);
         }
     }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Materials")
@@ -42,9 +43,23 @@ public class objectMusic : MonoBehaviour
             }
             audioSou.PlayOneShot(soundClip[rand]);
             high_Camera1.SetActive(true);
-            EGO.GetComponent<MoventmentController>().enabled = false;
+            Move();
+            high_Camera1.SetActive(false);
             Destroy(other.gameObject);
-            call();
+        }
+        if (other.gameObject.tag == "Materials2")
+        {
+            audioSou.volume = 0.05f;
+            int rand = Random.Range(0, soundClip.Length);
+            if (soundClip == null)
+            {
+                return;
+            }
+            audioSou.PlayOneShot(soundClip[rand]);
+            high_Camera2.SetActive(true);
+            Move();
+            high_Camera2.SetActive(false);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "bucket")
         {
@@ -55,7 +70,10 @@ public class objectMusic : MonoBehaviour
                 return;
             }
             audioSou.PlayOneShot(PoilClip[rand_button]);
-            call();
+            high_Camera3.SetActive(true);
+            Move();
+            high_Camera3.SetActive(false);
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "Text")
         {
@@ -71,10 +89,13 @@ public class objectMusic : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
-    public  void call()
+    private void  Move()
     {
-        A = false;
-        Debug.Log("123");
+        dead.SetActive(true);
+        EGO.GetComponent<MoventmentController>().enabled = false;
+        EGO.transform.position = roof_dead;
+        EGO.GetComponent<MoventmentController>().enabled = true;
     }
+
 
 }

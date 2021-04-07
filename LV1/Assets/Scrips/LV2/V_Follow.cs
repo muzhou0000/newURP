@@ -1,4 +1,5 @@
 ﻿using Fungus;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +8,7 @@ public class V_Follow : MonoBehaviour
     public Transform V;
     public float curDis;
     public float V_Speed;
+    public GameObject dead_camera,BGM,soundeffect;
 
     void Update()
     {
@@ -38,13 +40,23 @@ public class V_Follow : MonoBehaviour
             V_Speed = 2;
             //Destroy(other.gameObject);
         }
-        if (other.gameObject.tag=="Player")
+        if (other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("LV2");
+            dead_camera.SetActive(true);
+            soundeffect.SetActive(false);
+            BGM.SetActive(false);
+            Invoke("loadddd", 5f);
+
         }
-        if(other.gameObject.tag=="b")
+        if (other.gameObject.tag=="b")
         {
             Destroy(other.gameObject);
         }
+    }
+    void loadddd()
+    {
+
+        SceneManager.LoadScene("LV2");
+
     }
 }
