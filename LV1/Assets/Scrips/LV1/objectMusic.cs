@@ -33,48 +33,48 @@ public class objectMusic : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Materials")
-        {
-            audioSou.volume = 0.05f;
-            int rand = Random.Range(0, soundClip.Length);
-            if (soundClip == null)
-            {
-                return;
-            }
-            audioSou.PlayOneShot(soundClip[rand]);
-            high_Camera1.SetActive(true);
-            Move();
-            high_Camera1.SetActive(false);
-            Destroy(other.gameObject);
-        }
-        if (other.gameObject.tag == "Materials2")
-        {
-            audioSou.volume = 0.05f;
-            int rand = Random.Range(0, soundClip.Length);
-            if (soundClip == null)
-            {
-                return;
-            }
-            audioSou.PlayOneShot(soundClip[rand]);
-            high_Camera2.SetActive(true);
-            Move();
-            high_Camera2.SetActive(false);
-            Destroy(other.gameObject);
-        }
-        if (other.gameObject.tag == "bucket")
-        {
-            audioSou.volume = 0.05f;
-            int rand_button = Random.Range(0, PoilClip.Length);
-            if (PoilClip == null)
-            {
-                return;
-            }
-            audioSou.PlayOneShot(PoilClip[rand_button]);
-            high_Camera3.SetActive(true);
-            Move();
-            high_Camera3.SetActive(false);
-            Destroy(other.gameObject);
-        }
+        //if (other.gameObject.tag == "Materials")
+        //{
+        //    audioSou.volume = 0.05f;
+        //    int rand = Random.Range(0, soundClip.Length);
+        //    if (soundClip == null)
+        //    {
+        //        return;
+        //    }
+        //    audioSou.PlayOneShot(soundClip[rand]);
+        //    high_Camera1.SetActive(true);
+        //    Move();
+        //    high_Camera1.SetActive(false);
+        //    Destroy(other.gameObject);
+        //}
+        //if (other.gameObject.tag == "Materials2")
+        //{
+        //    audioSou.volume = 0.05f;
+        //    int rand = Random.Range(0, soundClip.Length);
+        //    if (soundClip == null)
+        //    {
+        //        return;
+        //    }
+        //    audioSou.PlayOneShot(soundClip[rand]);
+        //    high_Camera2.SetActive(true);
+        //    Move();
+        //    high_Camera2.SetActive(false);
+        //    Destroy(other.gameObject);
+        //}
+        //if (other.gameObject.tag == "bucket")
+        //{
+        //    audioSou.volume = 0.05f;
+        //    int rand_button = Random.Range(0, PoilClip.Length);
+        //    if (PoilClip == null)
+        //    {
+        //        return;
+        //    }
+        //    audioSou.PlayOneShot(PoilClip[rand_button]);
+        //    high_Camera3.SetActive(true);
+        //    Move();
+        //    high_Camera3.SetActive(false);
+        //    Destroy(other.gameObject);
+        //}
         if (other.gameObject.tag == "Text")
         {
             glassTip.SetActive(true);
@@ -89,13 +89,13 @@ public class objectMusic : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
-    private void  Move()
-    {
-        dead.SetActive(true);
-        EGO.GetComponent<MoventmentController>().enabled = false;
-        EGO.transform.position = roof_dead;
-        EGO.GetComponent<MoventmentController>().enabled = true;
-    }
+    //private void  Move()
+    //{
+    //    dead.SetActive(true);
+    //    EGO.GetComponent<MoventmentController>().enabled = false;
+    //    EGO.transform.position = roof_dead;
+    //    EGO.GetComponent<MoventmentController>().enabled = true;
+    //}
 
 
 }
