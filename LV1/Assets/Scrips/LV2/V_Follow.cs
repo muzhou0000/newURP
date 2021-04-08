@@ -8,36 +8,44 @@ public class V_Follow : MonoBehaviour
     public Transform V;
     public float curDis;
     public float V_Speed;
-    public GameObject dead_camera,BGM,soundeffect;
+    public GameObject dead_camera, BGM, soundeffect;
 
     void Update()
     {
         curDis -= 0.1f;
-        if(curDis<=-12)
+        if (curDis <= -12)
         {
             curDis = -10;
             curDis += 0.1f;
         }
-        if (V_Speed == 2)
+        if (V_Speed == 1)
         {
-            Invoke("resert", 0.8f);
+            Invoke("resert", 1);
+        }
+        if (V_Speed == 15)
+        {
+            Invoke("resert_", 0.5f);
         }
     }
-    public void Follow(Vector3 pos,float speed)
+    public void Follow(Vector3 pos, float speed)
     {
-        Vector3 position = pos - Vector3.forward*curDis ;
+        Vector3 position = pos - Vector3.forward * curDis;
         position.x = -1323.07f;
-        V.position = Vector3.Lerp(V.position, position, V_Speed*0.08f*Time.deltaTime);
+        V.position = Vector3.Lerp(V.position, position, V_Speed * 0.08f * Time.deltaTime);
+    }
+    private void resert_()
+    {
+        V_Speed = 9;
     }
     private void resert()
     {
-        V_Speed = 13;
+        V_Speed = 12;
     }
     private void OnCollisionEnter(UnityEngine.Collision other)
     {
-        if(other.gameObject.tag=="a"||other.gameObject.tag == "b")
+        if (other.gameObject.tag == "a" || other.gameObject.tag == "b")
         {
-            V_Speed = 2;
+            V_Speed = 1;
             //Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "Player")
@@ -48,7 +56,7 @@ public class V_Follow : MonoBehaviour
             Invoke("loadddd", 5f);
 
         }
-        if (other.gameObject.tag=="b")
+        if (other.gameObject.tag == "b")
         {
             Destroy(other.gameObject);
         }
