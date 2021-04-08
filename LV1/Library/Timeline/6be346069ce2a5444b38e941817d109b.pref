@@ -175,7 +175,7 @@ MonoBehaviour:
     showMarkers: 1
     showInlineCurves: 1
     inlineAnimationCurveHeight: 100
-    lastInlineCurveDataID: 35864
+    lastInlineCurveDataID: 36834
     inlineCurvesState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
@@ -201,9 +201,9 @@ MonoBehaviour:
     inlineCurvesShownAreaInsideMargins:
       serializedVersion: 2
       x: 0
-      y: -231.34003
+      y: -2.7700043
       width: 7.945336
-      height: 319.25293
+      height: 90.68298
     m_MarkerTimeStampsKeys: 
     m_MarkerTimeStampsValues: 
   - collapsed: 0
