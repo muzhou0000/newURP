@@ -28,7 +28,7 @@ public class AB12 : MonoBehaviour
     public GameObject Die;
     public GameObject Die_1;
     public GameObject Die_2;
-    public Flowchart flow;
+    public Flowchart flow,on_off_UI;
 
     float xAix, yAix;
     int Xnum;
@@ -46,6 +46,7 @@ public class AB12 : MonoBehaviour
         randomArray[1] = 6;
         randomArray[2] = 3;
         randomArray[3] = 7;
+        on_off_UI.ExecuteBlock("關UI");
     }
 
     public void Count()
@@ -69,6 +70,8 @@ public class AB12 : MonoBehaviour
             Die_2.SetActive(true);
             pass.Play();
             Invoke("close", 1.5f);
+            on_off_UI.ExecuteBlock("開UI");
+
             //if (Input.anyKeyDown)
         }
         //if (times > 6 && A < 4)
