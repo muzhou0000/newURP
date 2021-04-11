@@ -25,9 +25,8 @@ public class AB12 : MonoBehaviour
     public GameObject dead;
     public GameObject Cam,Player,deadPoint;
     public GameObject ABend;
-    public GameObject Die;
-    public GameObject Die_1;
-    public GameObject Die_2;
+    public GameObject Die,Die_1,Die_2;
+    public GameObject ABTip;
     public Flowchart flow,on_off_UI;
 
     float xAix, yAix;
@@ -71,6 +70,7 @@ public class AB12 : MonoBehaviour
             pass.Play();
             Invoke("close", 1.5f);
             on_off_UI.ExecuteBlock("開UI");
+            ABTip.SetActive(false);
 
             //if (Input.anyKeyDown)
         }

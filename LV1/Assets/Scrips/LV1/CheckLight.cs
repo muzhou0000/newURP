@@ -8,7 +8,7 @@ public class CheckLight : MonoBehaviour
 
     public Light check1, check2, check3, check4, check5, check6, check7, check8, check9;
     public GameObject countdown,LightUI;
-    public GameObject GG;
+    public GameObject GG,ChickLightTip;
     public GameObject Player;
     public GameObject Cam;
     public GameObject AB;
@@ -49,7 +49,8 @@ public class CheckLight : MonoBehaviour
             Cam_1.SetActive(true);
             Emeny.SetActive(false);
             //AB.SetActive(true);
-            LightUI.SetActive(false); 
+            LightUI.SetActive(false);
+            ChickLightTip.SetActive(false);
         }
         if (!Player.activeSelf) { 
         LightCheck();
