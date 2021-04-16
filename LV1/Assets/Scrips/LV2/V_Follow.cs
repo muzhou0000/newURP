@@ -35,11 +35,11 @@ public class V_Follow : MonoBehaviour
     }
     private void resert_()
     {
-        V_Speed = 9;
+        V_Speed = 11;
     }
     private void resert()
     {
-        V_Speed = 12;
+        V_Speed = 15;
     }
     private void OnCollisionEnter(UnityEngine.Collision other)
     {
