@@ -5,7 +5,7 @@ using UnityEngine;
 public class GetFile : MonoBehaviour
 {
     public bool GetFile1;
-    public GameObject GetFileTip,RKey,Box,Door;
+    public GameObject GetFileTip,RKey,Box,Door,DoorLight;
 
     private void Update()
     {
@@ -25,6 +25,7 @@ public class GetFile : MonoBehaviour
                 GetFileTip.SetActive(false);
                 Box.GetComponent<BoxCollider>().enabled = false;
                 Door.GetComponent<BoxCollider>().enabled = true;
+                DoorLight.SetActive(true);
             }
         }
 

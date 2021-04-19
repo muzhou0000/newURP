@@ -8,7 +8,7 @@ public class CheckLight : MonoBehaviour
 
     public Light check1, check2, check3, check4, check5, check6, check7, check8, check9;
     public GameObject countdown,LightUI;
-    public GameObject GG,ChickLightTip;
+    public GameObject ChickLightTip;
     public GameObject Player;
     public GameObject Cam;
     public GameObject AB;
@@ -37,8 +37,10 @@ public class CheckLight : MonoBehaviour
     void Update()
     {
         intnum();
-        xAix = Input.GetAxisRaw("Horizontal");
-        yAix = Input.GetAxisRaw("Vertical");
+        //xAix = Input.GetAxisRaw("Horizontal");
+        //yAix = Input.GetAxisRaw("Vertical");
+        xAix = Input.GetAxisRaw("XboxRL");
+        yAix = Input.GetAxisRaw("XboxUD");
         if (check1.enabled && check2.enabled && check3.enabled && check4.enabled && check5.enabled && check6.enabled && check7.enabled && check8.enabled && check9.enabled)
         {
             //countdown.SetActive(true);
@@ -89,7 +91,7 @@ public class CheckLight : MonoBehaviour
         {
             Xnum--;
             addx = false;
-            if (Xnum < 1)
+            if (Xnum < 0)
             {
                 Xnum = -1;
             }
@@ -111,7 +113,8 @@ public class CheckLight : MonoBehaviour
         {
             Ynum--;
             addy = false;
-            if (Ynum < 1)
+
+            if (Ynum < 0)
             {
                 Ynum = -1;
             }
