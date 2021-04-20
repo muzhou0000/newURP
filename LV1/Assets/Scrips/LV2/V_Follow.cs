@@ -54,7 +54,6 @@ public class V_Follow : MonoBehaviour
             soundeffect.SetActive(false);
             BGM.SetActive(false);
             Invoke("loadddd", 5f);
-
         }
         if (other.gameObject.tag == "b")
         {
@@ -63,7 +62,6 @@ public class V_Follow : MonoBehaviour
     }
     void loadddd()
     {
-
         SceneManager.LoadScene("LV2");
 
     }

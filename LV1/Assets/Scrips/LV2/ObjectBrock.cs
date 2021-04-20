@@ -38,8 +38,6 @@ public class ObjectBrock : MonoBehaviour
             audioSou.PlayOneShot(PoilClip[rand_button]);
         }
     }
-
-
 }
   
 
