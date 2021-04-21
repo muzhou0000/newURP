@@ -5,7 +5,7 @@ using UnityEngine;
 public class GetFile : MonoBehaviour
 {
     public bool GetFile1;
-    public GameObject GetFileTip,RKey,Box,Door,DoorLight;
+    public GameObject GetFileTip,RKey,Box,Door,DoorLight,Timeline_A,display;
 
     private void Update()
     {
@@ -16,6 +16,8 @@ public class GetFile : MonoBehaviour
                 GetFileTip.SetActive(true);
                 RKey.SetActive(false);
                 GetFile1 = true;
+                Timeline_A .SetActive(true);
+                display.SetActive(false);
             }
         }
         else if (GetFileTip.activeSelf == true && GetFile1)
@@ -26,6 +28,7 @@ public class GetFile : MonoBehaviour
                 Box.GetComponent<BoxCollider>().enabled = false;
                 Door.GetComponent<BoxCollider>().enabled = true;
                 DoorLight.SetActive(true);
+                Timeline_A.SetActive(false);
             }
         }
 
