@@ -6,7 +6,42 @@ ModelImporter:
   - first:
       74: -203655887218126122
     second: mixamo.com
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EYES4
+    second: {fileID: 2100000, guid: fc392bf297be99f4396b45d88bb24a2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vest4
+    second: {fileID: 2100000, guid: e1e8ea6f8db3aa24586409882bef7a3e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bigbag4
+    second: {fileID: 2100000, guid: e2651d953b9e0bd49b670d86f4625a57, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: iron_hand4
+    second: {fileID: 2100000, guid: b5e8e15e5bedd5b44bf0979cbca77bc9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shoes5
+    second: {fileID: 2100000, guid: 7b5c1b8c8a02ee44f946d482a9f5996c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: skin4
+    second: {fileID: 2100000, guid: e34aff092789abe4e978c8d9ca5fd102, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: smell_bag4
+    second: {fileID: 2100000, guid: 2461da98655eb7a42aa7ea516cf27b30, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -39,7 +74,7 @@ ModelImporter:
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 17
+      lastFrame: 72
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
