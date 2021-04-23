@@ -15,6 +15,7 @@ TagManager:
   - bucket
   - Text
   - Materials2
+  - c
   layers:
   - Default
   - TransparentFX

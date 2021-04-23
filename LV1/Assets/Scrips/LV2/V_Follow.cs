@@ -59,6 +59,10 @@ public class V_Follow : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
+        if (other.gameObject.tag == "C")
+        {
+            V_Speed = 1;
+        }
     }
     void loadddd()
     {
