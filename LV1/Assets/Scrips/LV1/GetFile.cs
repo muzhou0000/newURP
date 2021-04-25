@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
 public class GetFile : MonoBehaviour
 {
     public bool GetFile1;
     public GameObject GetFileTip,RKey,Box,Door,DoorLight,Timeline_A,display;
+    public Flowchart Talk;
 
     private void Update()
     {
@@ -18,6 +20,7 @@ public class GetFile : MonoBehaviour
                 GetFile1 = true;
                 Timeline_A .SetActive(true);
                 display.SetActive(false);
+                Talk.SetBooleanVariable("對話中",true);
             }
         }
         else if (GetFileTip.activeSelf == true && GetFile1)
@@ -29,6 +32,7 @@ public class GetFile : MonoBehaviour
                 Door.GetComponent<BoxCollider>().enabled = true;
                 DoorLight.SetActive(true);
                 Timeline_A.SetActive(false);
+                Talk.SetBooleanVariable("對話中", false);
             }
         }
 
