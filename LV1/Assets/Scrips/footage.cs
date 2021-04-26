@@ -18,7 +18,7 @@ public class footage : MonoBehaviour
     }
     void Step()
     {
-        audiosou.volume = 0.5f;
+        audiosou.volume = 0.4f;
         int rand = Random.Range(0, clips.Length);
         if (clips == null)
         {
@@ -28,7 +28,7 @@ public class footage : MonoBehaviour
     }
     void ladder()
     {
-        audiosou.volume = 0.152f;
+        audiosou.volume = 0.5f;
         int ladder_rand = Random.Range(0, ladder_clips.Length);
         if (ladder_clips == null)
         {

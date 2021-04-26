@@ -246,7 +246,7 @@ VideoPlayer:
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: _MainTex
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_AspectRatio: 2
   m_DataSource: 0
   m_PlaybackSpeed: 1
@@ -331,7 +331,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 719185741}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 719185746}
   variables: []
   description: 
   stepPause: 0
@@ -1039,7 +1040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1611870522}
+  selectedFlowchart: {fileID: 719185739}
 --- !u!4 &1561410768
 Transform:
   m_ObjectHideFlags: 1
@@ -1123,7 +1124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 67
+    x: 68
     y: 70
     width: 112
     height: 40
@@ -1162,7 +1163,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 1611870521}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 1611870519}
   variables: []
   description: 
   stepPause: 0
