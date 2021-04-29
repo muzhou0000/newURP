@@ -9,6 +9,8 @@ public class footage : MonoBehaviour
     protected AudioClip[] clips;
     [SerializeField]
     protected AudioClip[] ladder_clips;
+    [SerializeField]
+    protected AudioClip[] EmenyStepClip;
 
     AudioSource audiosou;
 
@@ -35,6 +37,16 @@ public class footage : MonoBehaviour
             return;
         }
         audiosou.PlayOneShot(ladder_clips[ladder_rand]);
+    }
+    void EmenyStep()
+    {
+        audiosou.volume = 0.3f;
+        int Emeny_rand = Random.Range(0, EmenyStepClip.Length);
+        if (EmenyStepClip == null)
+        {
+            return;
+        }
+        audiosou.PlayOneShot(EmenyStepClip[Emeny_rand]);
     }
     //AudioClip GetRandomClip()
     //{

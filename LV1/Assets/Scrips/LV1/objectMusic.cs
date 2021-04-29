@@ -19,6 +19,7 @@ public class objectMusic : MonoBehaviour
     public Vector3 roof_dead;
 
 
+
     private void Start()
     {
         A = true;
