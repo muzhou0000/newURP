@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Animations;
+using Fungus;
 
 public class FileManger : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class FileManger : MonoBehaviour
     public Animator OpenAni;
     public AudioSource Open;
     int B, C;
+    public Flowchart Talk;
 
     private void Update()
     {
@@ -19,6 +21,8 @@ public class FileManger : MonoBehaviour
             File.SetActive(true);
             OpenAni.SetBool("ani", true);
             CheckLight.intnum();//還沒用
+            Talk.SetBooleanVariable("對話中", true);
+            Talk.SetBooleanVariable("UI", true);
         }
         if (B>1 && Input.GetButtonUp("XboxLB") || B > 1 && Input.GetKeyDown(KeyCode.Escape))
         {
@@ -62,5 +66,7 @@ public class FileManger : MonoBehaviour
     void close()
     {
         File.SetActive(false);
+        Talk.SetBooleanVariable("對話中", false);
+        Talk.SetBooleanVariable("UI", false);
     }
 }
