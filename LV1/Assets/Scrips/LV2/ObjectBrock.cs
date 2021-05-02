@@ -11,6 +11,8 @@ public class ObjectBrock : MonoBehaviour
     protected AudioClip[] soundClip;
     [SerializeField]
     protected AudioClip[] PoilClip;
+    [SerializeField]
+    protected AudioClip[] MetalBoxClip;
 
 
 
@@ -37,6 +39,15 @@ public class ObjectBrock : MonoBehaviour
                 return;
             }
             audioSou.PlayOneShot(PoilClip[rand_button]);
+        }
+        if (other.gameObject.tag == "c")
+        {
+            int rand_metalbox = Random.Range(0, MetalBoxClip.Length);
+            if (MetalBoxClip == null)
+            {
+                return;
+            }
+            audioSou.PlayOneShot(MetalBoxClip[rand_metalbox]);
         }
     }
 }
