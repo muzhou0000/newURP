@@ -89,6 +89,17 @@ public class objectMusic : MonoBehaviour
             audioSou.PlayOneShot(soundClip[rand]);
             Destroy(other.gameObject);
         }
+        if (other.gameObject.tag == "Text_other")
+        {
+            audioSou.volume = 0.05f;
+            int rand = Random.Range(0, soundClip.Length);
+            if (soundClip == null)
+            {
+                return;
+            }
+            audioSou.PlayOneShot(soundClip[rand]);
+            Destroy(other.gameObject);
+        }
     }
     //private void  Move()
     //{

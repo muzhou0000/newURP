@@ -16,6 +16,7 @@ TagManager:
   - Text
   - Materials2
   - c
+  - Text_other
   layers:
   - Default
   - TransparentFX
