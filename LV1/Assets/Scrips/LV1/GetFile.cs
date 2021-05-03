@@ -6,7 +6,7 @@ using Fungus;
 public class GetFile : MonoBehaviour
 {
     public bool GetFile1;
-    public GameObject GetFileTip,RKey,Box,Door,DoorLight,Timeline_A,display;
+    public GameObject GetFileTip,RKey,Box,Door,DoorLight,Timeline_A,display,file;
     public Flowchart Talk;
 
     private void Update()
@@ -16,6 +16,7 @@ public class GetFile : MonoBehaviour
             if (Input.GetButtonDown("XboxA") || Input.GetKeyDown(KeyCode.R))
             {
                 GetFileTip.SetActive(true);
+                file.SetActive(true);
                 RKey.SetActive(false);
                 GetFile1 = true;
                 Timeline_A .SetActive(true);
